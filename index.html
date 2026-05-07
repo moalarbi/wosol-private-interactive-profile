@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WOSOL Concierge interactive company profile for private lifestyle management, luxury access, travel, events, and executive concierge services." />
+  <title>WOSOL Concierge | Interactive Company Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-active">
+  <div class="intro-loader" id="introLoader" aria-label="WOSOL Concierge loading screen">
+    <div class="intro-loader__inner">
+      <div class="intro-loader__brand en" aria-label="WOSOL Concierge">
+        <span class="intro-loader__name">WOSOL</span>
+        <span class="intro-loader__sub">CONCIERGE</span>
+      </div>
+      <div class="intro-loader__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Loading profile">
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="pattern-bg" aria-hidden="true"></div>
+  <div class="reading-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <aside class="chapter-rail" aria-label="Profile chapters">
+    <button data-jump="cover" class="rail-dot active"><span class="en">01</span></button>
+    <button data-jump="essence" class="rail-dot"><span class="en">02</span></button>
+    <button data-jump="principles" class="rail-dot"><span class="en">03</span></button>
+    <button data-jump="services" class="rail-dot"><span class="en">06</span></button>
+    <button data-jump="inquiry" class="rail-dot"><span class="en">11</span></button>
+  </aside>
+
+  <main class="page-wrapper" id="profileRoot">
+    <div class="top-bar profile-chrome" aria-label="Profile controls">
+      <div class="top-bar-meta en" id="documentMeta"></div>
+      <div class="logo-block" aria-label="WOSOL Concierge">
+        <span class="logo-name">WOSOL</span>
+        <span class="logo-sub">CONCIERGE</span>
+      </div>
+      <div class="chrome-actions">
+        <button class="mini-btn active" type="button" data-lang="en">English</button>
+        <button class="mini-btn" type="button" data-lang="ar">العربية</button>
+      </div>
+    </div>
+
+    <section class="hero chapter" id="cover" data-chapter="01"></section>
+
+    <div class="exec-summary" id="executiveSummary"></div>
+
+    <section class="section chapter" id="essence" data-chapter="02"></section>
+    <section class="section chapter" id="principles" data-chapter="03"></section>
+    <section class="section chapter" id="global" data-chapter="04"></section>
+    <section class="section chapter" id="ecosystem" data-chapter="05"></section>
+    <section class="section logo-cloud-section" id="accessLogos"></section>
+    <section class="section chapter" id="services" data-chapter="06"></section>
+    <section class="section chapter" id="segments" data-chapter="08"></section>
+    <section class="section chapter" id="process" data-chapter="09"></section>
+    <section class="section chapter" id="standard" data-chapter="10"></section>
+
+    <section class="closing-section chapter" id="inquiry" data-chapter="11"></section>
+  </main>
+
+  <section class="service-detail" id="serviceDetail" aria-hidden="true" aria-labelledby="serviceTitle">
+    <div class="service-detail__shade" data-close-service></div>
+    <article class="service-detail__panel" tabindex="-1">
+      <button class="back-btn service-close" type="button" data-close-service aria-label="Back to services">×</button>
+      <div id="serviceDetailContent"></div>
+    </article>
+  </section>
+
+  <button class="back-btn page-top" type="button" data-jump="cover" aria-label="Back to cover">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
