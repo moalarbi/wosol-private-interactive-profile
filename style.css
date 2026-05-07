@@ -2737,6 +2737,18 @@ html[dir="rtl"] .deck-rail {
     word-break: break-word;
   }
 
+  .principle-panel {
+    text-align: center;
+  }
+
+  .principle-panel h3,
+  .principle-panel p {
+    max-width: var(--deck-mobile-body-measure);
+    margin-inline: auto;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .principles-grid,
   .profile-slide--partners .partner-logo-grid {
     grid-template-columns: 1fr;
@@ -2793,6 +2805,202 @@ html[dir="rtl"] .deck-rail {
   .contact-profile-card {
     width: calc(100% - 42px);
     padding: 52px 22px;
+  }
+}
+
+/* Profile deck type scale: fixed, predictable sizes per device class. */
+:root {
+  --deck-logo-name: 22px;
+  --deck-logo-sub: 8.5px;
+  --deck-meta-text: 10.5px;
+  --deck-label-text: 10px;
+  --deck-cover-title: 82px;
+  --deck-slide-title: 58px;
+  --deck-service-title: 60px;
+  --deck-card-title: 25px;
+  --deck-body-text: 17px;
+  --deck-card-text: 15px;
+  --deck-secondary-text: 13px;
+  --deck-control-text: 11px;
+  --deck-cover-measure: 660px;
+  --deck-body-measure: 540px;
+  --deck-mobile-title-measure: 310px;
+  --deck-mobile-body-measure: 300px;
+}
+
+.deck-shell .logo-name,
+.slide-logo .logo-name,
+.contact-profile-card .logo-name {
+  font-size: var(--deck-logo-name);
+}
+
+.deck-shell .logo-sub,
+.slide-logo .logo-sub,
+.contact-profile-card .logo-sub {
+  font-size: var(--deck-logo-sub);
+}
+
+.deck-meta {
+  font-size: var(--deck-meta-text);
+}
+
+.slide-kicker,
+.service-slide-image figcaption {
+  font-size: var(--deck-label-text);
+}
+
+.cover-content {
+  max-width: var(--deck-cover-measure);
+}
+
+.cover-content h1 {
+  font-size: var(--deck-cover-title);
+  line-height: 1.06;
+}
+
+.slide-title-block h2,
+.global-statement h2 {
+  font-size: var(--deck-slide-title);
+  line-height: 1.12;
+}
+
+.service-slide-copy h2 {
+  font-size: var(--deck-service-title);
+  line-height: 1.06;
+}
+
+.cover-content p:not(.slide-kicker),
+.service-slide-copy p {
+  max-width: var(--deck-body-measure);
+  font-size: var(--deck-body-text);
+  line-height: 1.9;
+}
+
+.principle-panel h3 {
+  font-size: var(--deck-card-title);
+  line-height: 1.28;
+}
+
+.principle-panel p {
+  font-size: var(--deck-card-text);
+  line-height: 1.9;
+}
+
+.partner-logo-grid .logo-wordmark {
+  font-size: var(--deck-secondary-text);
+}
+
+.contact-profile-lines a {
+  font-size: 26px;
+  line-height: 1.45;
+}
+
+.deck-dot,
+.deck-count,
+.slide-footer,
+.mini-btn {
+  font-size: var(--deck-control-text);
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --deck-logo-name: 20px;
+    --deck-logo-sub: 8px;
+    --deck-cover-title: 56px;
+    --deck-slide-title: 44px;
+    --deck-service-title: 44px;
+    --deck-card-title: 22px;
+    --deck-body-text: 16px;
+    --deck-card-text: 14.5px;
+    --deck-secondary-text: 12.5px;
+    --deck-cover-measure: 560px;
+    --deck-body-measure: 480px;
+  }
+}
+
+@media (max-width: 980px) {
+  :root {
+    --deck-logo-name: 19px;
+    --deck-logo-sub: 7.8px;
+    --deck-meta-text: 10px;
+    --deck-label-text: 9.5px;
+    --deck-cover-title: 40px;
+    --deck-slide-title: 34px;
+    --deck-service-title: 36px;
+    --deck-card-title: 20px;
+    --deck-body-text: 15px;
+    --deck-card-text: 14px;
+    --deck-secondary-text: 12px;
+    --deck-control-text: 10.5px;
+    --deck-mobile-title-measure: 310px;
+    --deck-mobile-body-measure: 300px;
+  }
+
+  .cover-content {
+    width: min(84%, var(--deck-mobile-title-measure));
+  }
+
+  .cover-content h1,
+  .slide-title-block h2,
+  .global-statement h2,
+  .service-slide-copy h2 {
+    max-width: var(--deck-mobile-title-measure);
+    margin-inline: auto;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .cover-content p:not(.slide-kicker),
+  .global-statement p,
+  .service-slide-copy p {
+    max-width: var(--deck-mobile-body-measure);
+    margin-inline: auto;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-profile-lines a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --deck-logo-name: 18px;
+    --deck-logo-sub: 7.5px;
+    --deck-meta-text: 9.5px;
+    --deck-label-text: 9px;
+    --deck-cover-title: 38px;
+    --deck-slide-title: 31px;
+    --deck-service-title: 34px;
+    --deck-card-title: 19px;
+    --deck-body-text: 14.5px;
+    --deck-card-text: 13.5px;
+    --deck-secondary-text: 11.5px;
+    --deck-control-text: 10px;
+    --deck-mobile-title-measure: 292px;
+    --deck-mobile-body-measure: 292px;
+  }
+
+  .cover-content h1 {
+    line-height: 1.12;
+  }
+
+  .slide-title-block h2,
+  .service-slide-copy h2,
+  .global-statement h2 {
+    line-height: 1.22;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --deck-cover-title: 34px;
+    --deck-slide-title: 29px;
+    --deck-service-title: 31px;
+    --deck-body-text: 14.5px;
+    --deck-mobile-title-measure: 240px;
+    --deck-mobile-body-measure: 276px;
   }
 }
 
