@@ -29,16 +29,16 @@ Strict alcohol rule:
 ## File Map
 
 ```txt
-assets/images/partners/luxury-hotels.jpg
-assets/images/partners/private-aviation.jpg
-assets/images/partners/superyachts.jpg
-assets/images/partners/resorts.jpg
-assets/images/partners/fine-dining.jpg
-assets/images/partners/wellness-retreats.jpg
-assets/images/partners/real-estate.jpg
-assets/images/partners/luxury-fashion.jpg
-assets/images/partners/art-and-design.jpg
-assets/images/partners/private-events.jpg
+assets/images/partners/luxury-hotels.webp
+assets/images/partners/private-aviation.webp
+assets/images/partners/superyachts.webp
+assets/images/partners/resorts.webp
+assets/images/partners/fine-dining.webp
+assets/images/partners/wellness-retreats.webp
+assets/images/partners/real-estate.webp
+assets/images/partners/luxury-fashion.webp
+assets/images/partners/art-and-design.webp
+assets/images/partners/private-events.webp
 ```
 
 ## Prompts

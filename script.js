@@ -848,7 +848,7 @@ const imagePrompts = {
 };
 
 for (const blueprint of serviceBlueprints) {
-  blueprint.image = `assets/images/${blueprint.id}.jpg`;
+  blueprint.image = `assets/images/${blueprint.id}.webp`;
   blueprint.imagePrompt = imagePrompts[blueprint.id];
 }
 
@@ -1117,7 +1117,7 @@ function renderPartnerGallery(items, roles, variant) {
   const readLabel = state.lang === "ar" ? "استكشف الفئة" : "Explore category";
   const slides = items.map((item, index) => `
     <article class="partner-gallery-card" data-partner-slide="${index}">
-      <img src="assets/images/partners/${ecosystemImageFiles[index]}.jpg" alt="${escapeHtml(item)}" loading="lazy" />
+      <img src="assets/images/partners/${ecosystemImageFiles[index]}.webp" alt="${escapeHtml(item)}" loading="lazy" />
       <div class="partner-gallery-card__shade" aria-hidden="true"></div>
       <div class="partner-gallery-card__content">
         <h3 class="${textDirClass()}">${escapeHtml(item)}</h3>
@@ -1291,7 +1291,7 @@ function profileSlides() {
       title: state.lang === "ar" ? "وصول كونسيرج" : "WOSOL Concierge",
       subtitle: state.lang === "ar" ? "بروفايل الشركة" : "Company Profile",
       body: c.cover.desc,
-      image: "assets/images/lifestyle-concierge.jpg"
+      image: "assets/images/lifestyle-concierge.webp"
     },
     {
       id: "principles",
@@ -1314,7 +1314,7 @@ function profileSlides() {
       num: "04",
       title: state.lang === "ar" ? "نخدمك عالمياً، أينما كنت." : "Serving you globally, no matter where you are.",
       subtitle: state.lang === "ar" ? "الوعد العالمي" : "Global Promise",
-      image: "assets/images/travel-management.jpg"
+      image: "assets/images/travel-management.webp"
     },
     ...services.map((service, index) => ({
       id: service.id,
@@ -1359,14 +1359,14 @@ function renderProfileDeck() {
         ${slides.map((slide) => `<button class="deck-dot ${slide.num === "01" ? "active" : ""}" type="button" data-slide-target="${slide.id}"><span class="en">${slide.num}</span></button>`).join("")}
       </nav>
 
-      <div class="deck-pages">
-        ${slides.map((slide, index) => renderProfileSlide(slide, index, slides.length)).join("")}
-      </div>
-
       <div class="deck-controls" aria-label="Profile navigation">
         <button class="deck-nav-btn" type="button" data-slide-step="-1">‹</button>
         <span class="deck-count en"><span id="activeSlideNumber">01</span> / ${String(slides.length).padStart(2, "0")}</span>
         <button class="deck-nav-btn" type="button" data-slide-step="1">›</button>
+      </div>
+
+      <div class="deck-pages">
+        ${slides.map((slide, index) => renderProfileSlide(slide, index, slides.length)).join("")}
       </div>
     </div>
   `;

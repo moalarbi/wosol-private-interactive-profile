@@ -1,70 +1,64 @@
-# WOSOL Concierge Image Prompts
+# WOSOL Concierge Image Production Prompts
 
-Use these prompts to replace the current editorial placeholders. Keep images realistic, quiet, premium, uncrowded, and free of visible third-party logos.
+## Shared Rules
 
-## Main Profile Sections
+- Use realistic editorial luxury photography.
+- Output should work in wide slide crops and card crops.
+- Keep the important subject inside the center 70% safe area.
+- Color palette: cream stone, deep navy, muted champagne gold, warm neutrals.
+- Mood: quiet, private, premium, discreet, boardroom-ready.
+- No visible third-party logos, no readable text, no watermark.
+- No crowded scenes and no person looking at camera.
+- Strict alcohol rule: no wine, champagne, cocktails, bar counters, bottles, or alcohol glassware. Use water, Arabic coffee, porcelain, linen, flowers, books, folders, architecture, or neutral tableware instead.
+- Recommended generation framing: landscape, wide composition, 3:2 or 16:9 safe.
+- Final project processing: export as WebP around 1600px wide, quality 72-78, with JPEG fallback only when needed.
 
-### Cover
-Quiet luxury concierge coordination scene in a private residence or executive suite, cream stone, navy stationery, muted gold detail, no visible logos, no smiling stock model, private and boardroom-ready atmosphere.
+## Service Image Prompts
 
-### Brand Essence
-Close detail of an executive lifestyle planning desk, refined materials, itinerary cards, private notes, soft natural light, cream-first palette with deep navy accents.
+### lifestyle-concierge
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: quiet private lifestyle concierge coordination scene. Scene/backdrop: refined private residence reception desk with cream stone, navy leather notebook, sealed envelope, muted gold desk bell, soft flowers. Composition/framing: wide editorial landscape with centered subject and safe margins. Lighting/mood: soft natural light, private, calm, discreet. Avoid: logos, readable text, people facing camera, alcohol, bottles, watermark.
 
-### Global Reach
-Abstract luxury world access map using physical materials: engraved lines on warm stone or paper, navy pins, muted champagne accents, elegant and non-technical.
+### travel-management
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: premium travel planning still life. Scene/backdrop: cream desk with passport-like travel wallet with no visible country marks, folded itinerary cards without readable text, navy route folder, hotel key tray without logos. Composition/framing: wide, centered, generous negative space. Lighting/mood: international, refined, organized. Avoid: logos, readable text, alcohol, clutter, watermark.
 
-### Partners & Access Ecosystem
-Premium still life representing curated partner access: hotel key, yacht detail, aviation card, fine dining place card, all understated and without brand marks.
+### private-aviation
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: private aviation cabin detail without alcohol. Scene/backdrop: cream leather private jet cabin, oval aircraft window, navy travel folder on polished side table, soft runway lights outside. Composition/framing: wide cabin detail, no tight crop, safe center. Lighting/mood: executive, precise, discreet. Avoid: champagne, wine, alcohol glasses, bottles, brand marks, people, watermark.
 
-### Contact & Private Inquiry
-Private inquiry card on a cream desk, sealed envelope, WOSOL-style navy and beige palette, quiet confidential mood.
+### luxury-accommodation
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: luxury private accommodation. Scene/backdrop: secluded villa terrace, cream stone, linen curtains, calm pool edge, navy towel accent, soft greenery. Composition/framing: wide architectural composition with main lines centered. Lighting/mood: golden hour, private, serene. Avoid: logos, people, alcohol, signage, watermark.
 
-## Service Prompts
+### yacht-charters
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: refined yacht charter experience without party cues. Scene/backdrop: quiet yacht deck, teak floor, cream seating, navy textile accent, polished rail, calm sea. Composition/framing: wide deck detail with horizon low and safe margins. Lighting/mood: warm sunset, private, elegant. Avoid: alcohol, bottles, party scene, people, logos, watermark.
 
-### Lifestyle Concierge
-Editorial photograph of a quiet luxury concierge desk in a private residence, cream stone, navy notebook, no visible logos, discreet service details, soft natural light.
+### health-wellness-resorts
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: premium wellness retreat. Scene/backdrop: private spa terrace, warm stone, still water, folded cream towels, ceramic bowl, navy robe accent, soft greenery. Composition/framing: wide, centered, calm negative space. Lighting/mood: restorative morning light, holistic, private. Avoid: medical clinic look, people, alcohol, logos, watermark.
 
-### Travel Management
-Premium travel planning still life with passport, bespoke itinerary, luxury hotel key, cream and navy palette, international but understated, no logos.
+### shopping-gifting
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: luxury gifting and personal shopping still life. Scene/backdrop: textured cream wrapping paper, navy gift box with no logo, muted gold ribbon, leather tray, rare object silhouette. Composition/framing: wide table detail, centered, safe margins. Lighting/mood: tasteful, personal, discreet. Avoid: brand logos, readable labels, people, alcohol, watermark.
 
-### Private Aviation
-Private jet cabin detail with champagne beige leather, navy accents, runway light through window, quiet executive atmosphere, no people, no logos.
+### business-travel-management
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: executive business travel coordination. Scene/backdrop: boardroom table with navy itinerary folders, premium pen, tablet with blank dark screen, city skyline blur, water glass only. Composition/framing: wide executive still life, centered subject. Lighting/mood: corporate luxury, calm, efficient. Avoid: readable text, alcohol, bottles, logos, people facing camera, watermark.
 
-### Luxury Accommodation
-Private villa pool at golden hour, architectural calm, warm stone, linen curtains, secluded luxury residence, no visible brand marks.
+### personal-assistant
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: discreet personal assistant detail. Scene/backdrop: gloved hand placing an invitation envelope on a cream desk, navy calendar folder, muted gold clip, refined stationery with no readable text. Composition/framing: wide, hand detail not dominant, safe center. Lighting/mood: private, precise, trusted. Avoid: logos, readable text, alcohol, watermark.
 
-### Yacht Charters
-Luxury yacht deck at sunset with calm water, teak detail, cream upholstery, elegant and uncrowded, no party scene, no logos.
+### special-request
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: bespoke special request concept. Scene/backdrop: sealed envelope, private access card with no text, elegant tray, cream stone, navy folder, muted gold accent. Composition/framing: wide still life with generous negative space. Lighting/mood: confidential, understated, possible. Avoid: logos, readable text, alcohol, people, watermark.
 
-### Health & Wellness Resorts
-Secluded wellness resort terrace with spa water, warm stone, linen, greenery, quiet restorative mood, realistic luxury hospitality.
+### transportation-services
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: executive transportation arrival. Scene/backdrop: black premium car arriving at a refined hotel or private residence entrance, cream stone, warm evening light, driver silhouette only. Composition/framing: wide exterior scene, car centered but not cropped. Lighting/mood: private, calm, reliable. Avoid: visible car badges, logos, license plates, alcohol, crowd, watermark.
 
-### Shopping & Gifting
-Luxury gifting still life with textured paper, ribbon, leather tray, rare object hint, cream navy muted gold palette, no brand logos.
+### corporate-concierge-services
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: corporate concierge hospitality without alcohol. Scene/backdrop: executive meeting room with cream table setup, navy welcome folder, water glasses, porcelain, small flowers, itinerary cards with no readable text. Composition/framing: wide boardroom hospitality detail, centered. Lighting/mood: executive, premium, prepared. Avoid: wine glasses, bottles, alcohol, logos, people, watermark.
 
-### Business Travel Management
-Executive boardroom travel planning scene with itinerary, premium pen, city view, navy documents, quiet corporate luxury.
+### event-planning
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: private event planning setup without alcohol. Scene/backdrop: elegant private dinner table with cream linen, porcelain, water glassware, navy napkins, candles, floral restraint, no drinks except water. Composition/framing: wide event table, safe center, no tight crop. Lighting/mood: warm, intimate, composed. Avoid: wine, champagne, cocktails, bottles, bar scene, people, readable text, watermark.
 
-### Personal Assistant
-Discreet personal assistant service detail, gloved hand placing invitation card on cream desk, refined stationery, private atmosphere.
+### arts-design
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: private art and design access. Scene/backdrop: refined gallery or design studio, cream wall, sculptural chair, abstract artwork without signature, navy catalog folder, muted gold lighting. Composition/framing: wide balanced interior, centered focal point. Lighting/mood: cultured, quiet, sophisticated. Avoid: readable text, artist signatures, logos, people, alcohol, watermark.
 
-### Special Request
-Bespoke request concept with sealed envelope, private access card, elegant tray, dim luxury interior, understated and confidential.
+### vip-access
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: discreet VIP access corridor. Scene/backdrop: private venue entrance corridor, cream walls, deep navy carpet or velvet detail, warm lighting, subtle access rope suggested, no crowd. Composition/framing: wide corridor with vanishing line centered. Lighting/mood: exclusive, calm, private. Avoid: nightclub look, alcohol, people, logos, readable signage, watermark.
 
-### Transportation Services
-Executive black car arrival at luxury hotel entrance, soft evening light, driver silhouette only, no visible logos, calm and private.
-
-### Corporate Concierge Services
-Corporate hospitality setup with boardroom table, fine dining detail, itinerary cards, executive guest welcome, cream and navy tone.
-
-### Event Planning
-Private event table detail with linen, candlelight, floral restraint, premium place cards, intimate luxury setting, no crowd.
-
-### Arts & Design
-Private art gallery viewing with sculptural furniture, warm wall light, quiet collector atmosphere, no visible artist signatures or logos.
-
-### VIP Access
-Exclusive venue corridor with velvet rope suggested subtly, warm lighting, empty premium entrance, private access mood, no logos.
-
-### Real Estate
-Luxury residence interior with architectural staircase, warm stone, refined furniture, private viewing atmosphere, no real estate signage.
+### real-estate
+Use case: photorealistic-natural. Asset type: WOSOL service slide image. Primary request: private luxury real estate viewing. Scene/backdrop: refined residence interior with architectural staircase, cream stone, floor-to-ceiling window, navy property folder on console, muted gold light. Composition/framing: wide architectural image with safe margins. Lighting/mood: private, selective, high-value. Avoid: real estate signs, logos, readable text, people, alcohol, watermark.

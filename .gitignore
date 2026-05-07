@@ -1,1 +1,4 @@
 .vercel
+docs/qa/
+.publish/
+.npm-cache/

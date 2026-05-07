@@ -432,9 +432,11 @@ html[lang="ar"] .page-title {
   aspect-ratio: 16 / 10;
   background-image:
     linear-gradient(135deg, rgba(4, 16, 38, 0.86), rgba(22, 48, 78, 0.54)),
-    url("assets/images/lifestyle-concierge.jpg");
-  background-size: cover;
+    url("assets/images/lifestyle-concierge.webp");
+  background-color: #07182d;
+  background-size: 100% 100%, contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-image-frame {
@@ -443,8 +445,10 @@ html[lang="ar"] .page-title {
   background-image:
     linear-gradient(135deg, rgba(4, 16, 38, 0.42), rgba(22, 48, 78, 0.22)),
     var(--service-image);
-  background-size: cover;
+  background-color: rgba(4, 16, 38, 0.86);
+  background-size: 100% 100%, contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .visual-frame::before {
@@ -857,10 +861,11 @@ html[dir="ltr"] .card-cta-arrow::after {
       rgba(4, 16, 38, 0.00) 100%
     ),
     var(--partner-image);
-  background-size: 100% 100%, cover;
+  background-color: rgba(4, 16, 38, 0.88);
+  background-size: 100% 100%, contain;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
-  transition: background-size 0.45s ease, filter 0.35s ease;
+  transition: filter 0.35s ease;
 }
 
 .ecosystem-item span {
@@ -984,8 +989,9 @@ html[dir="ltr"] .card-cta-arrow::after {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.35s ease;
+  background: rgba(4, 16, 38, 0.92);
 }
 
 .partner-gallery-card:hover img {
@@ -1125,8 +1131,10 @@ body[dir="rtl"] .partner-gallery-card p {
   background-image:
     linear-gradient(135deg, rgba(4, 16, 38, 0.48), rgba(31, 70, 109, 0.16)),
     var(--service-image);
-  background-size: cover;
+  background-color: rgba(4, 16, 38, 0.88);
+  background-size: 100% 100%, contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-card-visual::before {
@@ -2229,6 +2237,12 @@ body {
 .deck-shell {
   position: relative;
   z-index: 1;
+  direction: ltr;
+}
+
+.deck-shell .ar {
+  direction: rtl;
+  text-align: inherit;
 }
 
 .deck-topbar {
@@ -2272,15 +2286,15 @@ body {
 
 .deck-pages {
   display: grid;
-  gap: 34px;
-  padding-top: 34px;
+  gap: 30px;
+  padding-top: 30px;
 }
 
 .profile-slide {
   position: relative;
-  min-height: min(720px, calc(100vh - 112px));
+  min-height: min(640px, calc(100vh - 150px));
   aspect-ratio: 842 / 595;
-  width: min(100%, 1180px);
+  width: min(100%, 1060px);
   margin: 0 auto;
   overflow: hidden;
   background:
@@ -2503,8 +2517,10 @@ body {
   background-image:
     linear-gradient(90deg, rgba(246, 244, 241, 0.08), rgba(4, 16, 38, 0.18)),
     var(--slide-image);
-  background-size: cover;
+  background-color: rgba(4, 16, 38, 0.90);
+  background-size: 100% 100%, contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .profile-slide--service {
@@ -2555,8 +2571,10 @@ body {
   background-image:
     linear-gradient(180deg, rgba(4, 16, 38, 0.04), rgba(4, 16, 38, 0.20)),
     var(--slide-image);
-  background-size: cover;
+  background-color: rgba(4, 16, 38, 0.90);
+  background-size: 100% 100%, contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .service-slide-image figcaption {
@@ -2646,7 +2664,7 @@ html[dir="rtl"] .deck-rail {
 
 .deck-controls {
   position: fixed;
-  left: 50%;
+  right: 24px;
   bottom: 20px;
   z-index: 30;
   display: flex;
@@ -2655,13 +2673,17 @@ html[dir="rtl"] .deck-rail {
   padding: 8px;
   background: rgba(246, 244, 241, 0.78);
   border: 1px solid rgba(4, 16, 38, 0.10);
-  transform: translateX(-50%);
+  transform: none;
   backdrop-filter: blur(14px);
 }
 
+html[dir="rtl"] .deck-controls {
+  right: 24px;
+}
+
 .deck-nav-btn {
-  width: 36px;
-  height: 34px;
+  width: 48px;
+  height: 48px;
   border: 0;
   background: var(--navy-deep);
   color: var(--beige-warm);
@@ -2671,7 +2693,7 @@ html[dir="rtl"] .deck-rail {
 }
 
 .deck-count {
-  min-width: 76px;
+  min-width: 82px;
   color: var(--navy-deep);
   font-size: 11px;
   text-align: center;
@@ -2704,6 +2726,11 @@ html[dir="rtl"] .deck-rail {
     min-height: auto;
     aspect-ratio: auto;
     padding-bottom: 72px;
+  }
+
+  .deck-pages {
+    gap: 24px;
+    padding-top: 16px;
   }
 
   .profile-slide--cover,
@@ -2814,16 +2841,16 @@ html[dir="rtl"] .deck-rail {
   --deck-logo-sub: 8.5px;
   --deck-meta-text: 10.5px;
   --deck-label-text: 10px;
-  --deck-cover-title: 82px;
-  --deck-slide-title: 58px;
-  --deck-service-title: 60px;
-  --deck-card-title: 25px;
-  --deck-body-text: 17px;
-  --deck-card-text: 15px;
-  --deck-secondary-text: 13px;
+  --deck-cover-title: 68px;
+  --deck-slide-title: 48px;
+  --deck-service-title: 50px;
+  --deck-card-title: 22px;
+  --deck-body-text: 15.5px;
+  --deck-card-text: 14px;
+  --deck-secondary-text: 12px;
   --deck-control-text: 11px;
-  --deck-cover-measure: 660px;
-  --deck-body-measure: 540px;
+  --deck-cover-measure: 600px;
+  --deck-body-measure: 500px;
   --deck-mobile-title-measure: 310px;
   --deck-mobile-body-measure: 300px;
 }
@@ -2906,15 +2933,15 @@ html[dir="rtl"] .deck-rail {
   :root {
     --deck-logo-name: 20px;
     --deck-logo-sub: 8px;
-    --deck-cover-title: 56px;
-    --deck-slide-title: 44px;
-    --deck-service-title: 44px;
-    --deck-card-title: 22px;
-    --deck-body-text: 16px;
-    --deck-card-text: 14.5px;
-    --deck-secondary-text: 12.5px;
-    --deck-cover-measure: 560px;
-    --deck-body-measure: 480px;
+    --deck-cover-title: 50px;
+    --deck-slide-title: 38px;
+    --deck-service-title: 40px;
+    --deck-card-title: 20px;
+    --deck-body-text: 15px;
+    --deck-card-text: 13.5px;
+    --deck-secondary-text: 11.5px;
+    --deck-cover-measure: 520px;
+    --deck-body-measure: 450px;
   }
 }
 
@@ -2924,13 +2951,13 @@ html[dir="rtl"] .deck-rail {
     --deck-logo-sub: 7.8px;
     --deck-meta-text: 10px;
     --deck-label-text: 9.5px;
-    --deck-cover-title: 40px;
-    --deck-slide-title: 34px;
-    --deck-service-title: 36px;
+    --deck-cover-title: 34px;
+    --deck-slide-title: 29px;
+    --deck-service-title: 31px;
     --deck-card-title: 20px;
-    --deck-body-text: 15px;
-    --deck-card-text: 14px;
-    --deck-secondary-text: 12px;
+    --deck-body-text: 14px;
+    --deck-card-text: 13px;
+    --deck-secondary-text: 11px;
     --deck-control-text: 10.5px;
     --deck-mobile-title-measure: 310px;
     --deck-mobile-body-measure: 300px;
@@ -2970,16 +2997,16 @@ html[dir="rtl"] .deck-rail {
     --deck-logo-sub: 7.5px;
     --deck-meta-text: 9.5px;
     --deck-label-text: 9px;
-    --deck-cover-title: 38px;
-    --deck-slide-title: 31px;
-    --deck-service-title: 34px;
-    --deck-card-title: 19px;
-    --deck-body-text: 14.5px;
-    --deck-card-text: 13.5px;
+    --deck-cover-title: 32px;
+    --deck-slide-title: 27px;
+    --deck-service-title: 29px;
+    --deck-card-title: 18px;
+    --deck-body-text: 13.8px;
+    --deck-card-text: 12.8px;
     --deck-secondary-text: 11.5px;
     --deck-control-text: 10px;
-    --deck-mobile-title-measure: 292px;
-    --deck-mobile-body-measure: 292px;
+    --deck-mobile-title-measure: 242px;
+    --deck-mobile-body-measure: 280px;
   }
 
   .cover-content h1 {
@@ -2995,12 +3022,149 @@ html[dir="rtl"] .deck-rail {
 
 @media (max-width: 420px) {
   :root {
-    --deck-cover-title: 34px;
-    --deck-slide-title: 29px;
-    --deck-service-title: 31px;
-    --deck-body-text: 14.5px;
-    --deck-mobile-title-measure: 240px;
-    --deck-mobile-body-measure: 276px;
+    --deck-cover-title: 30px;
+    --deck-slide-title: 26px;
+    --deck-service-title: 28px;
+    --deck-body-text: 13.5px;
+    --deck-mobile-title-measure: 250px;
+    --deck-mobile-body-measure: 270px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding-inline: 12px;
+    padding-bottom: 48px;
+  }
+
+  .profile-slide {
+    padding-bottom: 52px;
+  }
+
+  .profile-slide::before {
+    inset: 28px;
+  }
+
+  .profile-slide::after {
+    bottom: 36px;
+    width: 118px;
+  }
+
+  .slide-logo {
+    top: 48px;
+  }
+
+  .cover-content {
+    margin: 148px auto 62px;
+  }
+
+  .slide-title-block {
+    padding-top: 64px;
+    padding-bottom: 22px;
+  }
+
+  .principles-grid,
+  .profile-slide--partners .partner-logo-grid {
+    padding-bottom: 28px;
+  }
+
+  .principle-panel {
+    padding: 24px 18px;
+  }
+
+  .deck-controls {
+    position: sticky;
+    top: 8px;
+    bottom: auto;
+    width: max-content;
+    margin: 12px auto 16px;
+    left: auto;
+    right: auto;
+    transform: none;
+    background: rgba(246, 244, 241, 0.92);
+  }
+
+  .deck-nav-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .deck-actions {
+    width: min(100%, 220px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .mini-btn {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cover-content {
+    margin-top: 140px;
+  }
+
+  .slide-logo {
+    top: 44px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-wrapper {
+    padding-inline: 10px;
+  }
+
+  .deck-topbar {
+    overflow: hidden;
+  }
+
+  .deck-controls {
+    width: min(100%, 212px);
+    justify-content: space-between;
+  }
+
+  .deck-nav-btn {
+    width: 48px;
+    flex: 0 0 48px;
+  }
+
+  .deck-count {
+    min-width: 70px;
+  }
+
+  .profile-slide {
+    width: 100%;
+  }
+
+  .profile-slide::before {
+    inset: 22px;
+  }
+
+  .cover-mark {
+    width: 230px;
+    height: 230px;
+  }
+
+  .cover-content {
+    width: min(100%, 230px);
+  }
+
+  .cover-content h1,
+  .slide-title-block h2,
+  .global-statement h2,
+  .service-slide-copy h2 {
+    max-width: 224px;
+  }
+
+  .cover-content p:not(.slide-kicker),
+  .global-statement p,
+  .service-slide-copy p {
+    max-width: 238px;
   }
 }
 
