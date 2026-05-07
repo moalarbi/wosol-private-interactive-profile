@@ -555,8 +555,8 @@ const serviceBlueprints = [
 
 const content = {
   en: {
-    meta: "",
-    nav: { explore: "Explore Profile", services: "View Services", copy: "Copy", copied: "Copied" },
+    meta: "Interactive Company Profile · Confidential · 2026",
+    nav: { explore: "Explore Profile", services: "View Services", print: "Print", share: "Share", copy: "Copy", copied: "Copied", shared: "Link Copied" },
     cover: {
       label: "",
       title: "Private Lifestyle Management, Designed Around You.",
@@ -566,8 +566,26 @@ const content = {
     },
     summary: "WOSOL Concierge is not simply a service provider. It is a <strong>private lifestyle management partner</strong> for individuals, families, executives, corporate clients, VIP guests, and luxury partners who require trusted coordination across travel, access, hospitality, events, assets, and daily life.",
     sections: {
-      essence: {
+      profileIndex: {
         num: "02",
+        title: "Interactive Profile Map",
+        label: "Digital Alternative To The Company Profile",
+        body: [
+          "This profile translates the source company profile into a live executive document: brand foundation, operating logic, service portfolio, client pathways, and private inquiry information in one shareable experience.",
+          "It is designed to work as a first introduction for clients, partners, and executive reviewers while preserving the calm, confidential WOSOL identity."
+        ],
+        facts: [["16", "Dedicated service profiles"], ["05", "Client pathways"], ["03", "Brand foundations"], ["01", "Private inquiry point"]],
+        cards: [
+          ["Brand Foundation", "Vision, mission, values, and the global promise from the source profile.", "principles"],
+          ["Partner Landscape", "A refined version of the partner page and luxury access ecosystem.", "ecosystem"],
+          ["Global Promise", "Serving you globally, no matter where you are.", "global"],
+          ["Service Portfolio", "A full interactive view of the sixteen WOSOL Concierge service families.", "services"],
+          ["Client Pathways", "Clear positioning for private individuals, executives, families, VIP guests, and luxury partners.", "segments"],
+          ["Operating Standard", "Privacy, discretion, anticipation, trusted access, and seamless coordination.", "standard"]
+        ]
+      },
+      essence: {
+        num: "06",
         title: "Brand Essence",
         label: "Private Lifestyle Management Partner",
         body: [
@@ -591,21 +609,21 @@ const content = {
         ]
       },
       global: {
-        num: "04",
+        num: "05",
         title: "Global Reach",
         label: "Serving You Globally",
         body: ["Serving you globally, no matter where you are.", "WOSOL is positioned around international movement, trusted access, and private coordination across destinations, residences, events, and lifestyle needs."],
         metrics: [["16", "Concierge service families"], ["05", "Client segment pathways"], ["Global", "By request and partner network"], ["Private", "Inquiry-led coordination"]]
       },
       ecosystem: {
-        num: "05",
+        num: "04",
         title: "Partners & Access Ecosystem",
         label: "Curated Network, Not Public Claims",
         body: ["WOSOL operates through a curated partner ecosystem. Partner categories are shown without unsupported logo usage, preserving professionalism and rights clarity."],
         items: ["Luxury hotels", "Private aviation", "Superyachts", "Resorts", "Fine dining", "Wellness retreats", "Real estate", "Luxury fashion", "Art and design", "Private events"]
       },
       services: {
-        num: "06",
+        num: "07",
         title: "Services Overview",
         label: "Explore Dedicated Service Profiles",
         search: "Search services",
@@ -673,8 +691,8 @@ const content = {
     }
   },
   ar: {
-    meta: "",
-    nav: { explore: "استكشف الملف", services: "عرض الخدمات", copy: "نسخ", copied: "تم النسخ" },
+    meta: "بروفايل تفاعلي · سري · 2026",
+    nav: { explore: "استكشف البروفايل", services: "عرض الخدمات", print: "طباعة", share: "مشاركة", copy: "نسخ", copied: "تم النسخ", shared: "تم نسخ الرابط" },
     cover: {
       label: "",
       title: "إدارة نمط حياة خاص... مصممة حولك.",
@@ -684,8 +702,26 @@ const content = {
     },
     summary: "وصول كونسيرج ليست مجرد مزود خدمات. إنها <strong>شريك خاص لإدارة نمط الحياة</strong> للأفراد والعائلات والتنفيذيين وعملاء الشركات والضيوف ذوي الأهمية والشركاء الفاخرين ممن يحتاجون تنسيقاً موثوقاً في السفر والوصول والضيافة والمناسبات والأصول والحياة اليومية.",
     sections: {
-      essence: {
+      profileIndex: {
         num: "02",
+        title: "خريطة البروفايل التفاعلي",
+        label: "Digital Alternative To The Company Profile",
+        body: [
+          "هذا البروفايل يحوّل ملف الشركة الورقي إلى وثيقة تنفيذية حية تجمع أساس العلامة، منطق التشغيل، محفظة الخدمات، شرائح العملاء، ومعلومات التواصل الخاص في تجربة واحدة قابلة للمشاركة.",
+          "صُمم ليكون مدخلًا أوليًا للعملاء والشركاء والمراجعين التنفيذيين، مع الحفاظ على هوية وصول الهادئة والسرية."
+        ],
+        facts: [["16", "بروفايل خدمة مخصص"], ["05", "مسارات لشرائح العملاء"], ["03", "أسس للعلامة"], ["01", "نقطة تواصل خاصة"]],
+        cards: [
+          ["أساس العلامة", "الرؤية والرسالة والقيم والوعد العالمي كما وردت في البروفايل المصدر.", "principles"],
+          ["منظومة الشركاء", "صياغة رقمية مصقولة لصفحة الشركاء ومنظومة الوصول الفاخر.", "ecosystem"],
+          ["الوعد العالمي", "نخدمك عالمياً، أينما كنت.", "global"],
+          ["محفظة الخدمات", "عرض تفاعلي كامل لعائلات خدمات وصول كونسيرج الست عشرة.", "services"],
+          ["مسارات العملاء", "تموضع واضح للأفراد والتنفيذيين والعائلات والضيوف المهمين والشركاء الفاخرين.", "segments"],
+          ["معيار التشغيل", "الخصوصية والسرية والاستباقية والوصول الموثوق والتنسيق السلس.", "standard"]
+        ]
+      },
+      essence: {
+        num: "06",
         title: "جوهر العلامة",
         label: "Private Lifestyle Management Partner",
         body: [
@@ -709,21 +745,21 @@ const content = {
         ]
       },
       global: {
-        num: "04",
+        num: "05",
         title: "الوصول العالمي",
         label: "Serving You Globally",
         body: ["نخدمك عالمياً، أينما كنت.", "تتمحور وصول حول الحركة الدولية والوصول الموثوق والتنسيق الخاص عبر الوجهات والمساكن والمناسبات واحتياجات نمط الحياة."],
         metrics: [["16", "عائلة خدمات كونسيرج"], ["05", "مسارات لشرائح العملاء"], ["Global", "حسب الطلب وشبكة الشركاء"], ["Private", "تنسيق يبدأ بطلب خاص"]]
       },
       ecosystem: {
-        num: "05",
+        num: "04",
         title: "منظومة الشركاء والوصول",
         label: "Curated Network, Not Public Claims",
         body: ["تعمل وصول عبر منظومة شركاء منتقاة. تُعرض فئات الشركاء دون استخدام شعارات غير موثقة، حفاظاً على الاحترافية ووضوح حقوق الاستخدام."],
         items: ["فنادق فاخرة", "طيران خاص", "يخوت فاخرة", "منتجعات", "مطاعم راقية", "منتجعات عافية", "عقارات", "أزياء فاخرة", "فن وتصميم", "مناسبات خاصة"]
       },
       services: {
-        num: "06",
+        num: "07",
         title: "نظرة عامة على الخدمات",
         label: "Explore Dedicated Service Profiles",
         search: "ابحث في الخدمات",
@@ -889,7 +925,7 @@ const socialLinks = [
 ];
 
 let state = {
-  lang: "en",
+  lang: localStorage.getItem("wosol-lang") || "ar",
   filter: "all",
   query: ""
 };
@@ -945,6 +981,10 @@ function card(title, desc, index, featured = false, meta = "") {
 function renderCover() {
   const c = content[state.lang].cover;
   document.getElementById("documentMeta").textContent = content[state.lang].meta;
+  document.querySelector('[data-action="share"]').textContent = content[state.lang].nav.share;
+  document.querySelector('[data-action="share"]').setAttribute("aria-label", content[state.lang].nav.share);
+  document.querySelector('[data-action="print"]').textContent = content[state.lang].nav.print;
+  document.querySelector('[data-action="print"]').setAttribute("aria-label", content[state.lang].nav.print);
   document.getElementById("cover").innerHTML = `
     <div class="hero-layout">
       <div>
@@ -973,8 +1013,41 @@ function renderSummary() {
   `;
 }
 
+function renderProfileIndex() {
+  const s = content[state.lang].sections.profileIndex;
+  document.getElementById("profileIndex").innerHTML = sectionShell("profileIndex", `
+    <div class="profile-index-layout">
+      <div>
+        ${s.body.map((p) => `<p>${escapeHtml(p)}</p>`).join("")}
+      </div>
+      <div class="profile-facts" aria-label="${escapeHtml(s.title)}">
+        ${s.facts.map((item) => `
+          <div class="profile-fact">
+            <strong class="en">${escapeHtml(item[0])}</strong>
+            <span class="${textDirClass()}">${escapeHtml(item[1])}</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+    <div class="cards-grid profile-map-grid">
+      ${s.cards.map((item, i) => `
+        <article class="strategy-card ${i === 1 ? "featured" : ""}">
+          <span class="card-num en">${String(i + 1).padStart(2, "0")}</span>
+          <div class="card-title ${textDirClass()}">${escapeHtml(item[0])}</div>
+          <div class="card-desc ${textDirClass()}">${escapeHtml(item[1])}</div>
+          <button class="card-cta" type="button" data-jump="${escapeHtml(item[2])}">
+            ${content[state.lang].nav.explore}<span class="card-cta-arrow"></span>
+          </button>
+        </article>
+      `).join("")}
+    </div>
+  `);
+}
+
 function renderBasicSections() {
   const s = content[state.lang].sections;
+
+  renderProfileIndex();
 
   document.getElementById("essence").innerHTML = sectionShell("essence", `
     ${s.essence.body.map((p) => `<p>${escapeHtml(p)}</p>`).join("")}
@@ -1351,6 +1424,12 @@ function bindDynamicEvents() {
   document.querySelectorAll("[data-close-service]").forEach((btn) => {
     btn.onclick = () => closeServiceDetail(true);
   });
+  document.querySelectorAll("[data-action]").forEach((btn) => {
+    btn.onclick = () => {
+      if (btn.dataset.action === "print") window.print();
+      if (btn.dataset.action === "share") shareProfile(btn);
+    };
+  });
   bindPartnerShowcase();
   bindPartnerGallery();
 }
@@ -1437,16 +1516,16 @@ function initIntroLoader() {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
-  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  window.scrollTo({ top: 0, behavior: "auto" });
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const delay = reducedMotion ? 650 : 3000;
   window.setTimeout(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    window.scrollTo({ top: 0, behavior: "auto" });
     loader.classList.add("is-hidden");
     document.body.classList.remove("intro-active");
     window.setTimeout(() => {
       loader.remove();
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      window.scrollTo({ top: 0, behavior: "auto" });
       updateProgress();
     }, 700);
   }, delay);
@@ -1466,6 +1545,22 @@ async function copyText(value) {
   input.select();
   document.execCommand("copy");
   input.remove();
+}
+
+async function shareProfile(button) {
+  const shareData = {
+    title: "WOSOL Concierge Interactive Profile",
+    text: content[state.lang].cover.desc,
+    url: window.location.href.split("#")[0]
+  };
+  if (navigator.share) {
+    await navigator.share(shareData);
+    return;
+  }
+  await copyText(shareData.url);
+  const original = content[state.lang].nav.share;
+  button.textContent = content[state.lang].nav.shared;
+  window.setTimeout(() => { button.textContent = original; }, 1400);
 }
 
 function handleHash() {
