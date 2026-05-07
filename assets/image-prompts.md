@@ -10,8 +10,9 @@
 - No visible third-party logos, no readable text, no watermark.
 - No crowded scenes and no person looking at camera.
 - Strict alcohol rule: no wine, champagne, cocktails, bar counters, bottles, or alcohol glassware. Use water, Arabic coffee, porcelain, linen, flowers, books, folders, architecture, or neutral tableware instead.
-- Recommended generation framing: landscape, wide composition, 3:2 or 16:9 safe.
-- Final project processing: export as WebP around 1600px wide, quality 72-78, with JPEG fallback only when needed.
+- Recommended generation framing: create two final exports per image: desktop slide crop `1200 x 1340` and mobile crop `1280 x 860`.
+- Keep the most important subject inside the center 55% so both crops work without awkward cuts.
+- Final project processing: export as WebP quality 76-78 with JPEG fallback only when needed.
 
 ## Service Image Prompts
 

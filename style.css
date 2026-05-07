@@ -432,9 +432,9 @@ html[lang="ar"] .page-title {
   aspect-ratio: 16 / 10;
   background-image:
     linear-gradient(135deg, rgba(4, 16, 38, 0.86), rgba(22, 48, 78, 0.54)),
-    url("assets/images/lifestyle-concierge.webp");
+    url("assets/images/responsive/lifestyle-concierge-mobile.webp");
   background-color: #07182d;
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -446,7 +446,7 @@ html[lang="ar"] .page-title {
     linear-gradient(135deg, rgba(4, 16, 38, 0.42), rgba(22, 48, 78, 0.22)),
     var(--service-image);
   background-color: rgba(4, 16, 38, 0.86);
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -862,7 +862,7 @@ html[dir="ltr"] .card-cta-arrow::after {
     ),
     var(--partner-image);
   background-color: rgba(4, 16, 38, 0.88);
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   transition: filter 0.35s ease;
@@ -989,7 +989,7 @@ html[dir="ltr"] .card-cta-arrow::after {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.35s ease;
   background: rgba(4, 16, 38, 0.92);
 }
@@ -1132,7 +1132,7 @@ body[dir="rtl"] .partner-gallery-card p {
     linear-gradient(135deg, rgba(4, 16, 38, 0.48), rgba(31, 70, 109, 0.16)),
     var(--service-image);
   background-color: rgba(4, 16, 38, 0.88);
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -2260,6 +2260,10 @@ body {
 }
 
 .deck-logo {
+  grid-column: 2;
+}
+
+.deck-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2278,6 +2282,7 @@ body {
 }
 
 .deck-actions {
+  grid-column: 3;
   justify-self: end;
   display: flex;
   align-items: center;
@@ -2518,7 +2523,7 @@ body {
     linear-gradient(90deg, rgba(246, 244, 241, 0.08), rgba(4, 16, 38, 0.18)),
     var(--slide-image);
   background-color: rgba(4, 16, 38, 0.90);
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -2572,7 +2577,7 @@ body {
     linear-gradient(180deg, rgba(4, 16, 38, 0.04), rgba(4, 16, 38, 0.20)),
     var(--slide-image);
   background-color: rgba(4, 16, 38, 0.90);
-  background-size: 100% 100%, contain;
+  background-size: 100% 100%, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -2662,43 +2667,6 @@ html[dir="rtl"] .deck-rail {
   color: var(--beige-warm);
 }
 
-.deck-controls {
-  position: fixed;
-  right: 24px;
-  bottom: 20px;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px;
-  background: rgba(246, 244, 241, 0.78);
-  border: 1px solid rgba(4, 16, 38, 0.10);
-  transform: none;
-  backdrop-filter: blur(14px);
-}
-
-html[dir="rtl"] .deck-controls {
-  right: 24px;
-}
-
-.deck-nav-btn {
-  width: 48px;
-  height: 48px;
-  border: 0;
-  background: var(--navy-deep);
-  color: var(--beige-warm);
-  font-size: 24px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.deck-count {
-  min-width: 82px;
-  color: var(--navy-deep);
-  font-size: 11px;
-  text-align: center;
-}
-
 @media (max-width: 980px) {
   .page-wrapper {
     padding: 0 18px 86px;
@@ -2709,6 +2677,11 @@ html[dir="rtl"] .deck-controls {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
+  }
+
+  .deck-logo,
+  .deck-actions {
+    grid-column: auto;
   }
 
   .deck-actions {
@@ -2801,6 +2774,9 @@ html[dir="rtl"] .deck-controls {
   .service-slide-image {
     min-height: 300px;
     order: 2;
+    background-image:
+      linear-gradient(180deg, rgba(4, 16, 38, 0.04), rgba(4, 16, 38, 0.20)),
+      var(--slide-image-mobile, var(--slide-image));
   }
 
   .profile-slide--service.is-reversed .service-slide-copy,
@@ -2923,7 +2899,6 @@ html[dir="rtl"] .deck-controls {
 }
 
 .deck-dot,
-.deck-count,
 .slide-footer,
 .mini-btn {
   font-size: var(--deck-control-text);
@@ -3072,22 +3047,11 @@ html[dir="rtl"] .deck-controls {
     padding: 24px 18px;
   }
 
-  .deck-controls {
-    position: sticky;
-    top: 8px;
-    bottom: auto;
-    width: max-content;
-    margin: 12px auto 16px;
-    left: auto;
-    right: auto;
-    transform: none;
-    background: rgba(246, 244, 241, 0.92);
-  }
-
-  .deck-nav-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 21px;
+  .service-image-frame,
+  .service-card-visual.image-loaded {
+    background-image:
+      linear-gradient(135deg, rgba(4, 16, 38, 0.48), rgba(31, 70, 109, 0.16)),
+      var(--service-image-mobile, var(--service-image));
   }
 
   .deck-actions {
@@ -3121,20 +3085,6 @@ html[dir="rtl"] .deck-controls {
 
   .deck-topbar {
     overflow: hidden;
-  }
-
-  .deck-controls {
-    width: min(100%, 212px);
-    justify-content: space-between;
-  }
-
-  .deck-nav-btn {
-    width: 48px;
-    flex: 0 0 48px;
-  }
-
-  .deck-count {
-    min-width: 70px;
   }
 
   .profile-slide {
@@ -3171,7 +3121,6 @@ html[dir="rtl"] .deck-controls {
 @media print {
   .deck-topbar,
   .deck-rail,
-  .deck-controls,
   .reading-progress,
   .intro-loader {
     display: none !important;

@@ -555,7 +555,7 @@ const serviceBlueprints = [
 
 const content = {
   en: {
-    meta: "Interactive Company Profile · Confidential · 2026",
+    meta: "",
     nav: { explore: "Explore Profile", services: "View Services", print: "Print", share: "Share", copy: "Copy", copied: "Copied", shared: "Link Copied" },
     cover: {
       label: "",
@@ -691,7 +691,7 @@ const content = {
     }
   },
   ar: {
-    meta: "بروفايل تفاعلي · سري · 2026",
+    meta: "",
     nav: { explore: "استكشف البروفايل", services: "عرض الخدمات", print: "طباعة", share: "مشاركة", copy: "نسخ", copied: "تم النسخ", shared: "تم نسخ الرابط" },
     cover: {
       label: "",
@@ -852,6 +852,20 @@ for (const blueprint of serviceBlueprints) {
   blueprint.imagePrompt = imagePrompts[blueprint.id];
 }
 
+function responsiveImagePath(image, variant = "desktop") {
+  return image.replace("assets/images/", "assets/images/responsive/").replace(/\.webp$/, `-${variant}.webp`);
+}
+
+function responsivePartnerImagePath(name, variant = "desktop") {
+  return `assets/images/partners/responsive/${name}-${variant}.webp`;
+}
+
+function backgroundImageVars(prefix, image) {
+  const desktop = responsiveImagePath(image, "desktop");
+  const mobile = responsiveImagePath(image, "mobile");
+  return `--${prefix}: url('${escapeHtml(desktop)}'); --${prefix}-mobile: url('${escapeHtml(mobile)}')`;
+}
+
 const ecosystemImageFiles = [
   "luxury-hotels",
   "private-aviation",
@@ -981,10 +995,6 @@ function card(title, desc, index, featured = false, meta = "") {
 function renderCover() {
   const c = content[state.lang].cover;
   document.getElementById("documentMeta").textContent = content[state.lang].meta;
-  document.querySelector('[data-action="share"]').textContent = content[state.lang].nav.share;
-  document.querySelector('[data-action="share"]').setAttribute("aria-label", content[state.lang].nav.share);
-  document.querySelector('[data-action="print"]').textContent = content[state.lang].nav.print;
-  document.querySelector('[data-action="print"]').setAttribute("aria-label", content[state.lang].nav.print);
   document.getElementById("cover").innerHTML = `
     <div class="hero-layout">
       <div>
@@ -1117,7 +1127,7 @@ function renderPartnerGallery(items, roles, variant) {
   const readLabel = state.lang === "ar" ? "استكشف الفئة" : "Explore category";
   const slides = items.map((item, index) => `
     <article class="partner-gallery-card" data-partner-slide="${index}">
-      <img src="assets/images/partners/${ecosystemImageFiles[index]}.webp" alt="${escapeHtml(item)}" loading="lazy" />
+      <img src="${responsivePartnerImagePath(ecosystemImageFiles[index], "desktop")}" srcset="${responsivePartnerImagePath(ecosystemImageFiles[index], "mobile")} 900w, ${responsivePartnerImagePath(ecosystemImageFiles[index], "desktop")} 1280w" sizes="(max-width: 640px) 82vw, 33vw" alt="${escapeHtml(item)}" loading="lazy" />
       <div class="partner-gallery-card__shade" aria-hidden="true"></div>
       <div class="partner-gallery-card__content">
         <h3 class="${textDirClass()}">${escapeHtml(item)}</h3>
@@ -1235,7 +1245,7 @@ function serviceCard(service, index) {
   const s = content[state.lang].sections.services;
   return `
     <article class="strategy-card service-card" data-service="${service.id}">
-      <div class="service-card-visual image-loaded" style="--service-image: url('${escapeHtml(service.image)}')"><span>${escapeHtml(service.imageLabel)}</span></div>
+      <div class="service-card-visual image-loaded" style="${backgroundImageVars("service-image", service.image)}"><span>${escapeHtml(service.imageLabel)}</span></div>
       <span class="card-num en">${String(index + 1).padStart(2, "0")} · ${escapeHtml(service.category)}</span>
       <div class="card-title ${textDirClass()}">${escapeHtml(service.title)}</div>
       <div class="card-desc ${textDirClass()}">${escapeHtml(service.tagline)}</div>
@@ -1342,7 +1352,6 @@ function renderProfileDeck() {
   return `
     <div class="deck-shell">
       <header class="deck-topbar">
-        <div class="deck-meta en">${content[state.lang].meta}</div>
         <button class="deck-logo" type="button" data-slide-target="cover" aria-label="WOSOL Concierge">
           <span class="logo-name">WOSOL</span>
           <span class="logo-sub">CONCIERGE</span>
@@ -1350,20 +1359,12 @@ function renderProfileDeck() {
         <div class="deck-actions">
           <button class="mini-btn ${state.lang === "ar" ? "active" : ""}" type="button" data-lang="ar">العربية</button>
           <button class="mini-btn ${state.lang === "en" ? "active" : ""}" type="button" data-lang="en">English</button>
-          <button class="mini-btn" type="button" data-action="share">${content[state.lang].nav.share}</button>
-          <button class="mini-btn" type="button" data-action="print">${content[state.lang].nav.print}</button>
         </div>
       </header>
 
       <nav class="deck-rail" aria-label="Profile pages">
         ${slides.map((slide) => `<button class="deck-dot ${slide.num === "01" ? "active" : ""}" type="button" data-slide-target="${slide.id}"><span class="en">${slide.num}</span></button>`).join("")}
       </nav>
-
-      <div class="deck-controls" aria-label="Profile navigation">
-        <button class="deck-nav-btn" type="button" data-slide-step="-1">‹</button>
-        <span class="deck-count en"><span id="activeSlideNumber">01</span> / ${String(slides.length).padStart(2, "0")}</span>
-        <button class="deck-nav-btn" type="button" data-slide-step="1">›</button>
-      </div>
 
       <div class="deck-pages">
         ${slides.map((slide, index) => renderProfileSlide(slide, index, slides.length)).join("")}
@@ -1435,7 +1436,7 @@ function renderProfileSlide(slide, index, total) {
           <span class="slide-kicker en">${escapeHtml(slide.subtitle)}</span>
           <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
         </div>
-        <div class="global-photo" style="--slide-image: url('${escapeHtml(slide.image)}')"></div>
+        <div class="global-photo" style="${backgroundImageVars("slide-image", slide.image)}"></div>
         ${footer}
       </section>
     `;
@@ -1449,7 +1450,7 @@ function renderProfileSlide(slide, index, total) {
           <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
           <p class="${textDirClass()}">${escapeHtml(slide.body)}</p>
         </div>
-        <figure class="service-slide-image" style="--slide-image: url('${escapeHtml(slide.image)}')" aria-label="${escapeHtml(slide.imageLabel)}">
+        <figure class="service-slide-image" style="${backgroundImageVars("slide-image", slide.image)}" aria-label="${escapeHtml(slide.imageLabel)}">
           <figcaption class="en">${escapeHtml(slide.imageLabel)}</figcaption>
         </figure>
         ${footer}
@@ -1519,7 +1520,7 @@ function renderServiceDetail(id) {
           <button class="action-btn subtle" type="button" data-close-service>${labels.back}</button>
         </div>
       </div>
-      <div class="visual-frame service-image-frame" style="--service-image: url('${escapeHtml(service.image)}')" role="img" aria-label="${escapeHtml(service.imagePrompt)}">
+      <div class="visual-frame service-image-frame" style="${backgroundImageVars("service-image", service.image)}" role="img" aria-label="${escapeHtml(service.imagePrompt)}">
         <div class="visual-caption"><span class="en">Image Direction</span><strong class="${textDirClass()}">${escapeHtml(service.imageLabel)}</strong></div>
       </div>
     </div>

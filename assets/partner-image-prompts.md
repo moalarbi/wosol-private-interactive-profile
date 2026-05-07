@@ -5,8 +5,8 @@ Use these prompts to generate new images specifically for the `Partners & Access
 ## Shared Generation Rules
 
 Aspect and layout:
-- Target composition: landscape `8:5`, suitable for ecosystem cells.
-- Recommended output size if the image tool supports it: `1600 x 1000 px` or `1920 x 1200 px`.
+- Target composition: responsive ecosystem imagery with desktop crop `1280 x 800` and mobile crop `900 x 1200`.
+- Recommended source generation if the image tool supports it: wide, high-resolution editorial image with the subject centered enough to support both final crops.
 - Keep the main subject centered with generous safe margins on all sides.
 - Avoid tight close-ups so the image can sit inside a cell without important details being cropped.
 - The final CSS should use `background-size: contain` or an image layer with `object-fit: contain` to prevent cropping.
