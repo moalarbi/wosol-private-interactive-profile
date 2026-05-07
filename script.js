@@ -1280,6 +1280,210 @@ function renderInquiry() {
   `;
 }
 
+function profileSlides() {
+  const c = content[state.lang];
+  const services = getServices();
+  return [
+    {
+      id: "cover",
+      kind: "cover",
+      num: "01",
+      title: state.lang === "ar" ? "وصول كونسيرج" : "WOSOL Concierge",
+      subtitle: state.lang === "ar" ? "بروفايل الشركة" : "Company Profile",
+      body: c.cover.desc,
+      image: "assets/images/lifestyle-concierge.jpg"
+    },
+    {
+      id: "principles",
+      kind: "principles",
+      num: "02",
+      title: state.lang === "ar" ? "الرؤية والرسالة والقيم" : "Our Values, Vision & Mission",
+      subtitle: "Vision · Mission · Values",
+      cards: c.sections.principles.cards
+    },
+    {
+      id: "partners",
+      kind: "partners",
+      num: "03",
+      title: state.lang === "ar" ? "شركاؤنا" : "Our Partners",
+      subtitle: state.lang === "ar" ? "منظومة وصول فاخرة" : "Luxury Access Ecosystem"
+    },
+    {
+      id: "global",
+      kind: "global",
+      num: "04",
+      title: state.lang === "ar" ? "نخدمك عالمياً، أينما كنت." : "Serving you globally, no matter where you are.",
+      subtitle: state.lang === "ar" ? "الوعد العالمي" : "Global Promise",
+      image: "assets/images/travel-management.jpg"
+    },
+    ...services.map((service, index) => ({
+      id: service.id,
+      kind: "service",
+      num: String(index + 5).padStart(2, "0"),
+      title: service.title,
+      subtitle: service.category,
+      body: service.description,
+      image: service.image,
+      imageLabel: service.imageLabel,
+      reverse: index % 2 === 1
+    })),
+    {
+      id: "contact",
+      kind: "contact",
+      num: "21",
+      title: state.lang === "ar" ? "تواصل خاص" : "Private Inquiry",
+      subtitle: "info@wosolconcierge.com · +966 50 000 9979 · wosolconcierge.com"
+    }
+  ];
+}
+
+function renderProfileDeck() {
+  const slides = profileSlides();
+  return `
+    <div class="deck-shell">
+      <header class="deck-topbar">
+        <div class="deck-meta en">${content[state.lang].meta}</div>
+        <button class="deck-logo" type="button" data-slide-target="cover" aria-label="WOSOL Concierge">
+          <span class="logo-name">WOSOL</span>
+          <span class="logo-sub">CONCIERGE</span>
+        </button>
+        <div class="deck-actions">
+          <button class="mini-btn ${state.lang === "ar" ? "active" : ""}" type="button" data-lang="ar">العربية</button>
+          <button class="mini-btn ${state.lang === "en" ? "active" : ""}" type="button" data-lang="en">English</button>
+          <button class="mini-btn" type="button" data-action="share">${content[state.lang].nav.share}</button>
+          <button class="mini-btn" type="button" data-action="print">${content[state.lang].nav.print}</button>
+        </div>
+      </header>
+
+      <nav class="deck-rail" aria-label="Profile pages">
+        ${slides.map((slide) => `<button class="deck-dot ${slide.num === "01" ? "active" : ""}" type="button" data-slide-target="${slide.id}"><span class="en">${slide.num}</span></button>`).join("")}
+      </nav>
+
+      <div class="deck-pages">
+        ${slides.map((slide, index) => renderProfileSlide(slide, index, slides.length)).join("")}
+      </div>
+
+      <div class="deck-controls" aria-label="Profile navigation">
+        <button class="deck-nav-btn" type="button" data-slide-step="-1">‹</button>
+        <span class="deck-count en"><span id="activeSlideNumber">01</span> / ${String(slides.length).padStart(2, "0")}</span>
+        <button class="deck-nav-btn" type="button" data-slide-step="1">›</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderProfileSlide(slide, index, total) {
+  const footer = `
+    <div class="slide-footer">
+      <span class="en">${slide.num} / ${String(total).padStart(2, "0")}</span>
+      <span class="en">WOSOL Concierge</span>
+    </div>
+  `;
+
+  if (slide.kind === "cover") {
+    return `
+      <section class="profile-slide profile-slide--cover" id="${slide.id}" data-slide="${slide.num}">
+        <div class="slide-logo en">
+          <span class="logo-name">WOSOL</span>
+          <span class="logo-sub">CONCIERGE</span>
+        </div>
+        <div class="cover-mark" aria-hidden="true"></div>
+        <div class="cover-content">
+          <p class="slide-kicker en">${escapeHtml(slide.subtitle)}</p>
+          <h1 class="${textDirClass()}">${escapeHtml(slide.title)}</h1>
+          <p class="${textDirClass()}">${escapeHtml(slide.body)}</p>
+        </div>
+        ${footer}
+      </section>
+    `;
+  }
+
+  if (slide.kind === "principles") {
+    return `
+      <section class="profile-slide profile-slide--principles" id="${slide.id}" data-slide="${slide.num}">
+        ${slideTitle(slide)}
+        <div class="principles-grid">
+          ${slide.cards.map((item, cardIndex) => `
+            <article class="principle-panel ${cardIndex === 0 ? "featured" : ""}">
+              <span class="en">${String(cardIndex + 1).padStart(2, "0")}</span>
+              <h3 class="${textDirClass()}">${escapeHtml(item[0])}</h3>
+              <p class="${textDirClass()}">${escapeHtml(item[1])}</p>
+            </article>
+          `).join("")}
+        </div>
+        ${footer}
+      </section>
+    `;
+  }
+
+  if (slide.kind === "partners") {
+    return `
+      <section class="profile-slide profile-slide--partners" id="${slide.id}" data-slide="${slide.num}">
+        ${slideTitle(slide)}
+        <div class="partner-logo-grid">
+          ${accessLogos.map((name) => `<div class="partner-logo-cell">${accessLogoMarkup(name)}</div>`).join("")}
+        </div>
+        ${footer}
+      </section>
+    `;
+  }
+
+  if (slide.kind === "global") {
+    return `
+      <section class="profile-slide profile-slide--global" id="${slide.id}" data-slide="${slide.num}">
+        <div class="global-statement">
+          <span class="slide-kicker en">${escapeHtml(slide.subtitle)}</span>
+          <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
+        </div>
+        <div class="global-photo" style="--slide-image: url('${escapeHtml(slide.image)}')"></div>
+        ${footer}
+      </section>
+    `;
+  }
+
+  if (slide.kind === "service") {
+    return `
+      <section class="profile-slide profile-slide--service ${slide.reverse ? "is-reversed" : ""}" id="${slide.id}" data-slide="${slide.num}">
+        <div class="service-slide-copy">
+          <span class="slide-kicker en">${escapeHtml(slide.subtitle)}</span>
+          <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
+          <p class="${textDirClass()}">${escapeHtml(slide.body)}</p>
+        </div>
+        <figure class="service-slide-image" style="--slide-image: url('${escapeHtml(slide.image)}')" aria-label="${escapeHtml(slide.imageLabel)}">
+          <figcaption class="en">${escapeHtml(slide.imageLabel)}</figcaption>
+        </figure>
+        ${footer}
+      </section>
+    `;
+  }
+
+  return `
+    <section class="profile-slide profile-slide--contact" id="${slide.id}" data-slide="${slide.num}">
+      <div class="contact-profile-card">
+        <div class="slide-logo en">
+          <span class="logo-name">WOSOL</span>
+          <span class="logo-sub">CONCIERGE</span>
+        </div>
+        <div class="contact-profile-lines">
+          <a class="en" href="mailto:info@wosolconcierge.com">info@wosolconcierge.com</a>
+          <a class="en" href="tel:+966500009979">+966 50 000 9979</a>
+          <a class="en" href="https://wosolconcierge.com" target="_blank" rel="noopener noreferrer">wosolconcierge.com</a>
+        </div>
+      </div>
+      ${footer}
+    </section>
+  `;
+}
+
+function slideTitle(slide) {
+  return `
+    <div class="slide-title-block">
+      <span class="slide-kicker en">${escapeHtml(slide.subtitle)}</span>
+      <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
+    </div>
+  `;
+}
+
 function contactIcon(type) {
   const icons = {
     phone: `<svg viewBox="0 0 24 24" fill="none"><path d="M6.6 3.8 9.2 3l2.1 4.7-1.6 1.1c.8 1.7 2.1 3 3.8 3.8l1.1-1.6 4.7 2.1-.8 2.6c-.3 1-1.2 1.6-2.2 1.5C10.5 16.8 6.2 12.5 5.1 6.7 4.9 5.7 5.6 4.1 6.6 3.8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
@@ -1373,56 +1577,24 @@ function setLanguage(lang) {
   document.body.dir = lang === "ar" ? "rtl" : "ltr";
   document.querySelectorAll("[data-lang]").forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === lang));
   renderAll();
-  const activeService = location.hash.startsWith("#service/") ? location.hash.replace("#service/", "") : null;
-  if (activeService) renderServiceDetail(activeService);
 }
 
 function renderAll() {
-  renderCover();
-  renderSummary();
-  renderBasicSections();
-  renderServices();
-  renderInquiry();
+  document.getElementById("profileRoot").innerHTML = renderProfileDeck();
   bindDynamicEvents();
+  handleHash();
+  updateProgress();
 }
 
 function bindDynamicEvents() {
-  document.querySelectorAll("[data-jump]").forEach((btn) => {
-    btn.onclick = () => document.getElementById(btn.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.querySelectorAll("[data-lang]").forEach((btn) => {
+    btn.onclick = () => setLanguage(btn.dataset.lang);
   });
-  document.querySelectorAll("[data-open-service]").forEach((btn) => {
-    btn.onclick = () => {
-      const id = btn.dataset.openService;
-      history.pushState("", document.title, `#service/${id}`);
-      renderServiceDetail(id);
-    };
+  document.querySelectorAll("[data-slide-target]").forEach((btn) => {
+    btn.onclick = () => goToSlide(btn.dataset.slideTarget);
   });
-  document.querySelectorAll("[data-filter]").forEach((btn) => {
-    btn.onclick = () => {
-      state.filter = btn.dataset.filter;
-      renderServices();
-      bindDynamicEvents();
-    };
-  });
-  const search = document.getElementById("serviceSearch");
-  if (search) {
-    search.oninput = (event) => {
-      state.query = event.target.value;
-      renderServices();
-      bindDynamicEvents();
-      document.getElementById("serviceSearch")?.focus();
-    };
-  }
-  document.querySelectorAll("[data-copy]").forEach((btn) => {
-    btn.onclick = async () => {
-      await copyText(btn.dataset.copy);
-      const original = content[state.lang].nav.copy;
-      btn.textContent = content[state.lang].nav.copied;
-      setTimeout(() => { btn.textContent = original; }, 1200);
-    };
-  });
-  document.querySelectorAll("[data-close-service]").forEach((btn) => {
-    btn.onclick = () => closeServiceDetail(true);
+  document.querySelectorAll("[data-slide-step]").forEach((btn) => {
+    btn.onclick = () => stepSlide(Number(btn.dataset.slideStep));
   });
   document.querySelectorAll("[data-action]").forEach((btn) => {
     btn.onclick = () => {
@@ -1430,8 +1602,28 @@ function bindDynamicEvents() {
       if (btn.dataset.action === "share") shareProfile(btn);
     };
   });
-  bindPartnerShowcase();
-  bindPartnerGallery();
+}
+
+function goToSlide(id, updateHash = true) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (updateHash) history.replaceState("", document.title, `#${id}`);
+}
+
+function activeSlideIndex() {
+  const slides = [...document.querySelectorAll(".profile-slide")];
+  const viewportCenter = window.innerHeight / 2;
+  return slides.reduce((closest, slide, index) => {
+    const rect = slide.getBoundingClientRect();
+    const distance = Math.abs((rect.top + rect.height / 2) - viewportCenter);
+    return distance < closest.distance ? { index, distance } : closest;
+  }, { index: 0, distance: Infinity }).index;
+}
+
+function stepSlide(direction) {
+  const slides = [...document.querySelectorAll(".profile-slide")];
+  if (!slides.length) return;
+  const next = Math.max(0, Math.min(slides.length - 1, activeSlideIndex() + direction));
+  goToSlide(slides[next].id);
 }
 
 function bindPartnerShowcase() {
@@ -1498,16 +1690,23 @@ function bindPartnerGallery() {
 function updateProgress() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-  document.getElementById("progressBar").style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  const progressBar = document.getElementById("progressBar");
+  if (progressBar) progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
 
   let active = "cover";
-  document.querySelectorAll(".chapter").forEach((section) => {
+  let activeNumber = "01";
+  document.querySelectorAll(".profile-slide").forEach((section) => {
     const rect = section.getBoundingClientRect();
-    if (rect.top <= window.innerHeight * 0.36) active = section.id;
+    if (rect.top <= window.innerHeight * 0.48) {
+      active = section.id;
+      activeNumber = section.dataset.slide || activeNumber;
+    }
   });
-  document.querySelectorAll(".rail-dot").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.jump === active);
+  document.querySelectorAll(".deck-dot").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.slideTarget === active);
   });
+  const activeSlideNumber = document.getElementById("activeSlideNumber");
+  if (activeSlideNumber) activeSlideNumber.textContent = activeNumber;
 }
 
 function initIntroLoader() {
@@ -1564,13 +1763,9 @@ async function shareProfile(button) {
 }
 
 function handleHash() {
-  if (location.hash.startsWith("#service/")) {
-    renderServiceDetail(location.hash.replace("#service/", ""));
-  } else {
-    closeServiceDetail(false);
-    if (location.hash.length > 1) {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  if (location.hash.length > 1) {
+    const id = location.hash.slice(1).replace("service/", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
 
