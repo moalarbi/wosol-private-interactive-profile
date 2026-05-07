@@ -2,3 +2,5 @@
 docs/qa/
 .publish/
 .npm-cache/
+.appdata/
+.home/
