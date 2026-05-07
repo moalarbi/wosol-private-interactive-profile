@@ -1,9 +1,9 @@
-﻿const categories = {
-  lifestyle: { en: "Lifestyle Management", ar: "إدارة نمط الحياة" },
-  travel: { en: "Travel & Mobility", ar: "السفر والتنقل" },
-  access: { en: "Luxury Access", ar: "الوصول الفاخر" },
-  events: { en: "Corporate & Private Events", ar: "المناسبات الخاصة والتنفيذية" },
-  assets: { en: "Assets, Spaces & Culture", ar: "الأصول والمساحات والثقافة" }
+const categories = {
+  lifestyle: "Lifestyle Management",
+  travel: "Travel & Mobility",
+  access: "Luxury Access",
+  events: "Corporate & Private Events",
+  assets: "Assets, Spaces & Culture"
 };
 
 const serviceBlueprints = [
@@ -24,21 +24,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who value continuity, privacy, and fewer operational interruptions.",
       cta: "Request Lifestyle Support",
       imageLabel: "Private lifestyle management"
-    },
-    ar: {
-      title: "كونسيرج نمط الحياة",
-      tagline: "تفاصيل الحياة اليومية بإدارة هادئة وخصوصية عالية وذوق رفيع.",
-      description: "خدمات شخصية مصممة لتبسيط التعقيد اليومي وصناعة تجارب منتقاة حول أسلوب حياة العميل.",
-      outcome: "يعود وقتك لما يستحق الانتباه، بينما تتحرك التفاصيل بهدوء خلف المشهد.",
-      forWhom: ["الأفراد من أصحاب نمط الحياة عالي القيمة", "العائلات الخاصة", "كثيرو السفر", "المنازل التي تحتاج تنسيقاً موثوقاً"],
-      whenItMatters: ["الجداول الشخصية المزدحمة", "طلبات المنزل ونمط الحياة", "المناسبات الخاصة", "المهام المتكررة والترتيبات الدقيقة"],
-      wosolHandles: ["استقبال الطلب وتحليله", "تنسيق المورّدين", "التخطيط وفق الوقت والحساسية", "ترشيح التجارب", "المتابعة والتأكيد"],
-      experienceStandard: "استجابة دقيقة وسرية ومصممة حول تفضيلات العميل، لا حول قائمة خدمات عامة.",
-      difference: "تبني وصول معرفة تراكمية بالعميل، فتتحول الطلبات مع الوقت إلى تنفيذ أسرع وأكثر دقة.",
-      sampleRequests: ["خطة عشاء منتقاة", "تنسيق خدمات منزلية", "تحضير مناسبة خاصة", "موعد تسوق شخصي", "برنامج نهاية أسبوع خاص"],
-      audienceRelevance: "لمن يقدّر الاستمرارية والخصوصية وتقليل الانشغال بالتفاصيل التشغيلية.",
-      cta: "اطلب دعماً خاصاً لنمط الحياة",
-      imageLabel: "إدارة نمط حياة خاصة"
     }
   },
   {
@@ -58,21 +43,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who want the journey to feel as refined as the destination.",
       cta: "Plan a Private Journey",
       imageLabel: "Seamless luxury travel"
-    },
-    ar: {
-      title: "إدارة السفر",
-      tagline: "رحلات منسقة من النية الأولى حتى الوصول الأخير.",
-      description: "تخطيط شامل للسفر يشمل الرحلات والإقامة والتنقلات واللوجستيات لصناعة رحلة سلسة ومدروسة.",
-      outcome: "كل حركة في الرحلة تبدو مترابطة ومهيأة وخالية من التعقيد غير الضروري.",
-      forWhom: ["المسافرون الخاصون", "العائلات", "الأزواج", "الضيوف الذين يحتاجون تنسيقاً راقياً للرحلة"],
-      whenItMatters: ["برامج متعددة المدن", "العطلات العائلية", "السفر الترفيهي الفاخر", "تغييرات المسار المفاجئة"],
-      wosolHandles: ["تنسيق الرحلات", "ترشيح الإقامة", "ترتيب التنقلات", "خدمة الوصول", "متابعة البرنامج أثناء السفر"],
-      experienceStandard: "وضوح ومرونة وتجربة مبنية حول الراحة والوقت والخصوصية وتفضيلات العميل.",
-      difference: "تتعامل وصول مع السفر كتجربة متكاملة، لا كسلسلة حجوزات منفصلة.",
-      sampleRequests: ["برنامج رحلة ترفيهية كامل", "تنقل من المطار إلى الفيلا", "تنسيق الفندق والمطاعم", "خطة سفر عائلية", "تعديل المسار أثناء الرحلة"],
-      audienceRelevance: "لمن يريد أن تكون الرحلة بذات رقي الوجهة.",
-      cta: "خطط رحلة خاصة",
-      imageLabel: "سفر فاخر وسلس"
     }
   },
   {
@@ -92,21 +62,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients whose time, privacy, and route control are critical.",
       cta: "Coordinate Private Aviation",
       imageLabel: "Private jet cabin and arrival"
-    },
-    ar: {
-      title: "الطيران الخاص",
-      tagline: "سفر جوي منسق بسرية ودقة ويقين في الوقت.",
-      description: "تنسيق حلول الطيران الخاص من خيارات الطائرات والمسارات إلى تفضيلات الرحلة وخدمات الوصول.",
-      outcome: "تتحول الحركة الحساسة للوقت إلى تجربة خاصة ومنضبطة ومتوافقة مع جدول العميل.",
-      forWhom: ["قادة الأعمال", "الأفراد ذوو الملاءة العالية جداً", "العائلات", "المديرون التنفيذيون ذوو الجداول المرنة"],
-      whenItMatters: ["اجتماعات عاجلة", "رحلات متعددة المدن", "تنقلات سرية", "وصول ضيوف رفيعي المستوى", "رحلات عائلية تتطلب خصوصية"],
-      wosolHandles: ["تنسيق الطائرة", "المسارات المفضلة", "النقل الأرضي", "تفضيلات الرحلة", "الدعم في الوثائق والوصول"],
-      experienceStandard: "خصوصية وانضباط وسرية وتجربة تدور حول العميل لا حول جدول رحلة تجارية.",
-      difference: "الطائرة جزء واحد فقط؛ وصول تنسق الحركة الكاملة قبل الرحلة وبعدها.",
-      sampleRequests: ["تنسيق استئجار طائرة خاصة", "برنامج تنفيذي متعدد المدن", "نقل من المطار إلى المقر", "ترتيب تفضيلات الرحلة", "خدمة وصول خاصة"],
-      audienceRelevance: "لمن تمثل له الخصوصية والوقت والتحكم بالمسار عناصر حاسمة.",
-      cta: "نسّق الطيران الخاص",
-      imageLabel: "مقصورة طائرة خاصة ووصول هادئ"
     }
   },
   {
@@ -126,21 +81,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need the privacy of a residence with the reliability of premium hospitality.",
       cta: "Curate a Private Stay",
       imageLabel: "Private villa and residence"
-    },
-    ar: {
-      title: "الإقامة الفاخرة",
-      tagline: "مساكن مختارة للخصوصية والراحة وملاءمة نمط الحياة.",
-      description: "فلل وشاليهات وبنتهاوس وإقامات عالمية مختارة، مع خدمات مثل الطهاة الخاصين والأمن والدعم المنزلي.",
-      outcome: "تبدو الإقامة كمنزل خاص مجهز حول طريقة حياة العميل.",
-      forWhom: ["العائلات", "المسافرون للإقامات الطويلة", "الضيوف الخاصون", "العملاء الباحثون عن مساكن آمنة"],
-      whenItMatters: ["الإقامات الموسمية", "العطلات العائلية", "السفر عالي الخصوصية", "الاحتفالات", "إقامات العمل عن بعد"],
-      wosolHandles: ["ترشيح العقار", "إضافة طبقات الخدمة", "تنسيق الطاهي الخاص", "ترتيب الأمن والسائقين", "دعم الوصول والإقامة"],
-      experienceStandard: "اختيار وتجهيز وخدمة تناسب خصوصية العميل وراحته وطبيعة ضيوفه.",
-      difference: "تقيّم وصول المسكن كبيئة تشغيل كاملة، لا كعقار جميل فقط.",
-      sampleRequests: ["فيلا خاصة مع طاهٍ", "شاليه جبلي للعائلة", "بنتهاوس قرب منطقة أعمال", "سكن مدعوم بخدمة أمنية", "تجهيز المنزل قبل الوصول"],
-      audienceRelevance: "لمن يحتاج خصوصية السكن مع موثوقية الضيافة الفاخرة.",
-      cta: "رشّح إقامة خاصة",
-      imageLabel: "فيلا ومسكن خاص"
     }
   },
   {
@@ -160,21 +100,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who want a private marine setting without coordinating the many hidden details.",
       cta: "Arrange a Yacht Experience",
       imageLabel: "Yacht deck at sunset"
-    },
-    ar: {
-      title: "تأجير اليخوت",
-      tagline: "تجارب بحرية خاصة مصممة حول طبيعة الضيوف والمناسبة.",
-      description: "تنظيم تجارب يخوت مصممة حسب التفضيلات، من رحلات ساحلية هادئة إلى مناسبات خاصة في المرافئ وبرامج بحرية متعددة الأيام.",
-      outcome: "يتحول الوقت في البحر إلى تجربة خاصة ومضيفة ودقيقة بلا جهد ظاهر.",
-      forWhom: ["العائلات", "المجموعات الخاصة", "المضيفون من الشركات", "المسافرون الباحثون عن تجارب بحرية"],
-      whenItMatters: ["الهروب الساحلي", "مناسبات المرفأ", "الاحتفالات", "استضافة العملاء", "الرحلات البحرية متعددة الأيام"],
-      wosolHandles: ["اختيار اليخت", "تنسيق المسار", "تفضيلات الطاقم والضيافة", "تنظيم التنقلات", "تفاصيل تجربة الضيوف"],
-      experienceStandard: "أناقة وسرية ووعي بالسلامة وتجربة مضبوطة على نبرة المناسبة.",
-      difference: "تُصمم التجربة حول المزاج والضيوف والخصوصية والتوقيت التشغيلي.",
-      sampleRequests: ["رحلة يخت وقت الغروب", "رحلة عائلية خاصة", "استضافة مناسبة بحرية", "عشاء بطاهٍ على اليخت", "برنامج ساحلي لعدة أيام"],
-      audienceRelevance: "لمن يريد بيئة بحرية خاصة دون الانشغال بتفاصيلها الخفية.",
-      cta: "رتّب تجربة يخت",
-      imageLabel: "سطح يخت عند الغروب"
     }
   },
   {
@@ -194,21 +119,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need renewal without exposure, inconvenience, or generic programming.",
       cta: "Curate a Wellness Retreat",
       imageLabel: "Private wellness resort"
-    },
-    ar: {
-      title: "منتجعات الصحة والاستشفاء",
-      tagline: "تجارب استشفاء مختارة بخصوصية وراحة محسوبة.",
-      description: "برامج عافية وتجارب استشفاء شاملة تُرشح لتجديد الذهن والجسد والإيقاع في بيئات فاخرة.",
-      outcome: "تصبح العافية إعادة توازن مدروسة، لا هروباً عابراً.",
-      forWhom: ["المديرون التنفيذيون", "الأزواج", "العائلات", "العملاء الباحثون عن التعافي أو التوازن أو الوقاية"],
-      whenItMatters: ["التعافي من الإرهاق", "إعادة ضبط موسمية", "تجديد ما بعد السفر", "رحلات عافية عائلية", "برامج صحية بسرية عالية"],
-      wosolHandles: ["ترشيح المنتجع", "تنسيق البرنامج", "الإقامة", "تفضيلات العافية", "لوجستيات السفر والخصوصية"],
-      experienceStandard: "هدوء واحترام وسرية وتجربة تناسب وتيرة العميل وحدوده الصحية.",
-      difference: "تركز وصول على الملاءمة والخصوصية والاستمرارية بدلاً من باقات عافية رائجة.",
-      sampleRequests: ["برنامج استشفاء فاخر", "نهاية أسبوع للتعافي التنفيذي", "إقامة في منتجع شمولي", "تنسيق مدرب وطاهٍ خاص", "برنامج عافية عائلي"],
-      audienceRelevance: "لمن يحتاج التجدد دون انكشاف أو إزعاج أو برامج عامة.",
-      cta: "صمّم تجربة استشفاء",
-      imageLabel: "منتجع عافية خاص"
     }
   },
   {
@@ -228,21 +138,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who want refined choices without time-consuming search or visible effort.",
       cta: "Curate a Gift or Edit",
       imageLabel: "Luxury gifting still life"
-    },
-    ar: {
-      title: "التسوق والإهداء",
-      tagline: "اختيارات تقودها الذائقة للأناقة الشخصية والهدايا النادرة واللفتات ذات المعنى.",
-      description: "خدمات أزياء وإهداء واقتناء قطع نادرة مصممة حول أسلوب العميل والمناسبة وطبيعة العلاقة.",
-      outcome: "كل اختيار يبدو شخصياً ومدروساً وملائماً للحظة.",
-      forWhom: ["العملاء الخاصون", "المديرون التنفيذيون", "العائلات", "المضيفون الباحثون عن هدايا استثنائية"],
-      whenItMatters: ["هدايا المناسبات المهمة", "تجديد الخزانة", "المناسبات المفاجئة", "البحث عن قطع نادرة", "الإهداء المؤسسي بسرية"],
-      wosolHandles: ["فهم التفضيلات", "البحث والاقتناء", "التغليف والتقديم", "تنسيق التسليم", "ترشيحات حساسة لطبيعة المناسبة"],
-      experienceStandard: "اختيار منتقى وذوق رفيع وسرية وابتعاد عن الخيارات العامة.",
-      difference: "توازن وصول بين الوصول والمعنى، لتناسب القطعة الشخص والعلاقة.",
-      sampleRequests: ["البحث عن قطعة نادرة", "تنسيق هدية فاخرة", "موعد تسوق شخصي", "تحرير اختيارات أزياء خاصة", "توصيل هدية مناسبة"],
-      audienceRelevance: "لمن يريد اختيارات راقية دون بحث طويل أو جهد ظاهر.",
-      cta: "نسّق هدية أو اختياراً خاصاً",
-      imageLabel: "تفاصيل هدية فاخرة"
     }
   },
   {
@@ -262,21 +157,6 @@ const serviceBlueprints = [
       audienceRelevance: "For leaders and teams whose travel must protect time, privacy, and decision quality.",
       cta: "Plan Executive Travel",
       imageLabel: "Executive travel planning"
-    },
-    ar: {
-      title: "إدارة سفر الأعمال",
-      tagline: "تنقل تنفيذي منسق حول الاجتماعات والخصوصية والإنتاجية.",
-      description: "تخطيط سفر موجه للأعمال يشمل الرحلات والإقامة والتنقلات ولوجستيات الاجتماعات والدعم عند التغيير.",
-      outcome: "يصل التنفيذي جاهزاً وفي الوقت المناسب ومتحرراً للتركيز على هدف الرحلة.",
-      forWhom: ["المديرون التنفيذيون", "المؤسسون", "أعضاء المجالس", "فرق الشركات", "الوفود الزائرة"],
-      whenItMatters: ["اجتماعات المجلس", "الجولات الاستثمارية", "زيارات المستثمرين", "الجداول متعددة المدن", "استضافة الشركات عالية الأهمية"],
-      wosolHandles: ["تصميم برنامج السفر التنفيذي", "تنسيق الرحلات والفنادق", "الحركة الأرضية", "لوجستيات الاجتماعات", "تعديلات فورية عند الحاجة"],
-      experienceStandard: "دقة وسرية وانضباط زمني وملاءمة لضغط الأعمال.",
-      difference: "تتعامل وصول مع سفر الأعمال كبيئة إنتاجية، لا كبرنامج تنقل فقط.",
-      sampleRequests: ["أسبوع سفر للقيادة التنفيذية", "خطة وصول وفد", "مسار من المطار إلى الاجتماع ثم المقر", "فندق قريب من موقع الاجتماع", "معالجة جدول مفاجئ"],
-      audienceRelevance: "للقادة والفرق التي يجب أن يحمي سفرها الوقت والخصوصية وجودة القرار.",
-      cta: "خطط سفر الأعمال",
-      imageLabel: "تخطيط سفر تنفيذي"
     }
   },
   {
@@ -296,21 +176,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need dependable personal execution without explaining everything repeatedly.",
       cta: "Assign a Private Request",
       imageLabel: "Discreet personal assistance"
-    },
-    ar: {
-      title: "المساعد الشخصي",
-      tagline: "طلبات متخصصة تُدار بحكمة وسرية ومتابعة دقيقة.",
-      description: "مساعدة شخصية للطلبات المعقدة أو الحساسة أو شديدة الخصوصية، من الوصول النادر إلى تنظيم اللحظات الشخصية بعناية.",
-      outcome: "يُفهم الطلب ويُرتب حسب الأولوية ويُنفذ دون تحميل العميل تفاصيله.",
-      forWhom: ["الأفراد الخاصون", "المديرون التنفيذيون", "العائلات", "العملاء محدودو الوقت"],
-      whenItMatters: ["احتياجات شخصية عاجلة", "تنسيق معقد", "احتفالات خاصة", "رعاية الضيوف", "البحث عن طلب غير معتاد"],
-      wosolHandles: ["تحديد نطاق الطلب", "مراجعة القابلية للتنفيذ", "تنسيق المورّدين", "تواصل سري", "متابعة الإنجاز"],
-      experienceStandard: "هدوء واحترام وواقعية مع السعي لأفضل نتيجة ممكنة.",
-      difference: "تحمي وصول وقت العميل بتحويل الطلبات غير الواضحة إلى خطوات قابلة للتنفيذ.",
-      sampleRequests: ["تأمين تذاكر صعبة", "تنسيق احتفال خاص", "إدارة وصول الضيوف", "البحث عن قطعة محددة", "إنجاز مهمة حساسة"],
-      audienceRelevance: "لمن يحتاج تنفيذاً شخصياً يعتمد عليه دون تكرار الشرح.",
-      cta: "كلّفنا بطلب خاص",
-      imageLabel: "مساعدة شخصية بسرية"
     }
   },
   {
@@ -330,21 +195,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need a trusted point of contact when the request is not ordinary.",
       cta: "Submit a Special Request",
       imageLabel: "Bespoke access and execution"
-    },
-    ar: {
-      title: "الطلبات الخاصة",
-      tagline: "احتياجات غير معتادة تتحول إلى تنفيذ منظم وسري.",
-      description: "إدارة شخصية للاحتياجات الفريدة أو الحصرية، لجعل الطلبات المعقدة قابلة للتحقق عبر شركاء موثوقين وتنسيق دقيق.",
-      outcome: "يتحول الطلب الصعب إلى مشروع مدار بخطوات واضحة.",
-      forWhom: ["العملاء الخاصون", "المكاتب العائلية", "المديرون التنفيذيون", "المضيفون ذوو المتطلبات غير التقليدية"],
-      whenItMatters: ["احتياجات وصول نادرة", "إهداء معقد", "تنسيق عابر للحدود", "ترتيبات سرية", "مواعيد ضغط عالية"],
-      wosolHandles: ["توضيح الطلب", "تحديد الشركاء", "مراجعة المخاطر والخصوصية", "خطة التنفيذ", "تحديثات الحالة"],
-      experienceStandard: "سرية وواقعية ووضوح حول ما يمكن تنفيذه بجودة.",
-      difference: "تمنح وصول هيكلاً للطلبات التي لا تنتمي إلى فئة خدمات تقليدية.",
-      sampleRequests: ["تجربة وجهة نادرة", "زيارة ثقافية خاصة", "رعاية ضيوف بسرية", "البحث عن قطعة صعبة", "تنسيق برنامج مفاجئ"],
-      audienceRelevance: "لمن يحتاج نقطة اتصال موثوقة عندما يكون الطلب غير عادي.",
-      cta: "أرسل طلباً خاصاً",
-      imageLabel: "وصول خاص وتنفيذ حسب الطلب"
     }
   },
   {
@@ -364,21 +214,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need ground travel to remain calm, private, and reliable.",
       cta: "Arrange Transportation",
       imageLabel: "Executive car arrival"
-    },
-    ar: {
-      title: "خدمات التنقل",
-      tagline: "حركة أرضية براحة وسرية وثقة في المسار.",
-      description: "حلول تنقل شاملة من خيارات القيادة الذاتية إلى خدمات السائقين بمركبات فاخرة وسائقين ذوي خبرة.",
-      outcome: "تبدو الوصولات والمغادرات والحركة اليومية منضبطة وخاصة وهادئة.",
-      forWhom: ["المديرون التنفيذيون", "العائلات", "الضيوف الخاصون", "مضيفو المناسبات", "المسافرون الذين يحتاجون حركة آمنة"],
-      whenItMatters: ["نقل المطار", "احتياج سائق يومي", "وصول المناسبات", "تنسيق عدة مركبات", "تنقل بين المدن"],
-      wosolHandles: ["مطابقة المركبة", "تنسيق السائق", "تخطيط المسار", "قوائم الضيوف", "إدارة الوقت والبدائل"],
-      experienceStandard: "نظافة وانضباط وسرية وتوافق مع توقعات الراحة والأمان.",
-      difference: "تدير وصول منطق الحركة خلف المركبة، لا السيارة وحدها.",
-      sampleRequests: ["سيارة فاخرة بسائق", "تنسيق مركبة عائلية", "موكب تنفيذي", "سيارة فاخرة للقيادة الذاتية", "خطة نقل ضيوف مناسبة"],
-      audienceRelevance: "لمن يحتاج تنقلاً أرضياً هادئاً وخاصاً وموثوقاً.",
-      cta: "رتّب التنقل",
-      imageLabel: "وصول سيارة تنفيذية"
     }
   },
   {
@@ -398,21 +233,6 @@ const serviceBlueprints = [
       audienceRelevance: "For organizations that host high-value people and cannot afford fragmented coordination.",
       cta: "Design Corporate Support",
       imageLabel: "Corporate private hospitality"
-    },
-    ar: {
-      title: "خدمات الكونسيرج للشركات",
-      tagline: "احتياجات التنفيذيين والشركات عبر طبقة تنسيق واحدة وسرية.",
-      description: "خدمات كونسيرج مصممة للمديرين والشركات، تدير الاجتماعات واللوجستيات ورعاية الضيوف ومتطلبات الوصول الفاخر.",
-      outcome: "تتحول ضيافة الشركات إلى تجربة دقيقة وخاصة ومتوافقة مع مستوى العلامة.",
-      forWhom: ["المديرون التنفيذيون", "مكاتب الشركات", "فرق المجالس", "علاقات المستثمرين", "فرق رعاية الضيوف"],
-      whenItMatters: ["استضافة التنفيذيين", "زيارات الوفود", "اجتماعات المجلس", "ترفيه العملاء", "رعاية شركاء أو موظفين عالي القيمة"],
-      wosolHandles: ["دعم الاجتماعات", "السفر والتنقل", "الوصول للمطاعم والمواقع", "برامج الضيوف", "التنسيق الميداني"],
-      experienceStandard: "احتراف وسرية وانضباط زمني ووعي بسمعة الشركة.",
-      difference: "تمنح وصول الشركات طبقة ضيافة خاصة دون الحاجة لبناء وظيفة كونسيرج داخلية.",
-      sampleRequests: ["برنامج ضيف تنفيذي", "لوجستيات اجتماع", "تنسيق عشاء مجلس", "دعم وصول شريك", "إدارة مزايا نمط الحياة للشركات"],
-      audienceRelevance: "للمنظمات التي تستضيف أشخاصاً عالي القيمة ولا يناسبها التنسيق المجزأ.",
-      cta: "صمّم دعماً للشركة",
-      imageLabel: "ضيافة شركات خاصة"
     }
   },
   {
@@ -432,21 +252,6 @@ const serviceBlueprints = [
       audienceRelevance: "For hosts who need atmosphere and execution to meet the same standard.",
       cta: "Plan a Private Event",
       imageLabel: "Private event table detail"
-    },
-    ar: {
-      title: "تخطيط المناسبات",
-      tagline: "تجمعات خاصة ولحظات كبيرة تُنظم بعناية دقيقة.",
-      description: "تخطيط مناسبات لا تُنسى من اللقاءات الحميمة إلى الاحتفالات الكبرى، مع عناية بالأجواء ورحلة الضيف وكل التفاصيل التشغيلية.",
-      outcome: "يبقى المضيف حاضراً في لحظته بينما تتحرك المناسبة بأناقة وسيطرة.",
-      forWhom: ["المضيفون الخاصون", "العائلات", "المديرون التنفيذيون", "عملاء الشركات", "لجان الاحتفال"],
-      whenItMatters: ["أعياد ميلاد مهمة", "عشاءات خاصة", "فعاليات إطلاق", "احتفالات عائلية", "استقبالات تنفيذية"],
-      wosolHandles: ["اتجاه الفكرة", "تنسيق الموقع والمورّدين", "حركة الضيوف", "الضيافة والترفيه", "إدارة يوم المناسبة"],
-      experienceStandard: "صقل ووعي عاطفي وسيطرة هادئة من التخطيط حتى الختام.",
-      difference: "تربط وصول المناسبة بخصوصية المضيف وذائقته وسياقه الاجتماعي.",
-      sampleRequests: ["عشاء خاص", "احتفال بمناسبة مهمة", "استقبال مؤسسي", "دعم مناسبة في وجهة خارجية", "تخطيط مفاجأة خاصة"],
-      audienceRelevance: "للمضيفين الذين يريدون أن يلتقي الجو والتنفيذ على مستوى واحد.",
-      cta: "خطط مناسبة خاصة",
-      imageLabel: "تفاصيل مائدة مناسبة خاصة"
     }
   },
   {
@@ -466,21 +271,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients whose spaces and collections need privacy, taste, and trusted access.",
       cta: "Curate Art or Design Support",
       imageLabel: "Private gallery and interior detail"
-    },
-    ar: {
-      title: "الفنون والتصميم",
-      tagline: "مساحات ومجموعات ووصول ثقافي يتشكل بذائقة وخبرة.",
-      description: "حلول تصميم عملية وجميلة لمساحات السكن والعمل، مع تنسيق زيارات معارض خاصة واقتناء أعمال فنية وتواصل مع مصممين معروفين.",
-      outcome: "تعكس بيئة العميل ومجموعته هويته الشخصية بخصوصية وعمق.",
-      forWhom: ["ملاك المنازل", "جامعو الأعمال", "المديرون التنفيذيون", "المكاتب العائلية", "العملاء الذين يطورون مساحاتهم الخاصة"],
-      whenItMatters: ["تجهيز مسكن جديد", "تحسين مكتب", "اقتناء عمل فني", "زيارة معرض خاصة", "تجديد داخلي"],
-      wosolHandles: ["التعريف بالمصممين", "تنسيق مشاهدة الأعمال الفنية", "دعم الاقتناء", "تطوير موجز المساحة", "مواءمة المورّدين"],
-      experienceStandard: "ذائقة ثقافية وهدوء وملاءمة للسياق الشخصي للعميل.",
-      difference: "تربط وصول بين التصميم والفن ونمط الحياة بدلاً من التعامل معها كمهام منفصلة.",
-      sampleRequests: ["زيارة معرض خاصة", "ترشيح مصمم داخلي", "تنسيق اقتناء عمل فني", "موجز تنسيق منزل", "ترتيب تجربة ثقافية"],
-      audienceRelevance: "لمن تحتاج مساحاته ومجموعاته إلى خصوصية وذائقة ووصول موثوق.",
-      cta: "نسّق دعماً فنياً أو تصميمياً",
-      imageLabel: "معرض خاص وتفاصيل داخلية"
     }
   },
   {
@@ -500,21 +290,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who value meaningful access without public exposure or overstatement.",
       cta: "Explore Private Access",
       imageLabel: "Exclusive venue access"
-    },
-    ar: {
-      title: "الوصول الخاص",
-      tagline: "وصول مميز عبر قنوات موثوقة وحكم دقيق.",
-      description: "تنسيق الوصول إلى فعاليات رفيعة ومواقع فاخرة وتجارب محدودة، حيث تهم الأهلية والتوقيت والسرية.",
-      outcome: "يبدو الوصول مدروساً ومحميّاً، لا صاخباً ولا تجارياً.",
-      forWhom: ["العملاء الخاصون", "المديرون التنفيذيون", "الضيوف المسافرون", "مضيفو الشركات", "عملاء نمط الحياة"],
-      whenItMatters: ["فعاليات رفيعة", "مواقع خاصة", "مناسبات ثقافية", "مطاعم مميزة", "تجارب محدودة الوصول"],
-      wosolHandles: ["مراجعة طلب الوصول", "تنسيق الشركاء", "متطلبات الضيوف", "تخطيط التوقيت والوصول", "التعامل السري"],
-      experienceStandard: "احترام وسرية ووضوح حول التوفر والشروط.",
-      difference: "تتجنب وصول الوعود السطحية وتسعى للوصول عبر مسارات مناسبة وموثوقة.",
-      sampleRequests: ["وصول إلى عشاء خاص", "تنسيق حضور فعالية", "استفسار عن موقع خاص بالأعضاء", "وصول إلى مناسبة ثقافية", "رعاية وصول الضيوف"],
-      audienceRelevance: "لمن يقدّر الوصول ذي المعنى دون انكشاف أو مبالغة.",
-      cta: "استكشف الوصول الخاص",
-      imageLabel: "وصول إلى موقع حصري"
     }
   },
   {
@@ -534,21 +309,6 @@ const serviceBlueprints = [
       audienceRelevance: "For clients who need property access and evaluation to respect lifestyle and confidentiality.",
       cta: "Discuss Property Access",
       imageLabel: "Luxury residence access"
-    },
-    ar: {
-      title: "العقارات",
-      tagline: "وصول عقاري فاخر يستند إلى ملاءمة نمط الحياة وشركاء موثوقين.",
-      description: "دعم العملاء في الوصول إلى فرص عقارية فاخرة ومساكن راقية وعقارات استثمارية وتجارب عقارية مرتبطة بنمط الحياة عبر شركاء موثوقين ومعرفة سوقية خاصة.",
-      outcome: "تصبح قرارات العقار موجهة بنمط الحياة والخصوصية والملاءمة طويلة الأمد.",
-      forWhom: ["المشترون الخاصون", "المستثمرون", "المكاتب العائلية", "المديرون المنتقلون", "الباحثون عن منزل ثانٍ"],
-      whenItMatters: ["البحث عن مسكن خاص", "استكشاف منزل ثانٍ", "مراجعة عقار استثماري", "الانتقال", "زيارات عقارية مرتبطة بنمط الحياة"],
-      wosolHandles: ["تحديد المتطلبات", "التعريف بشركاء موثوقين", "تنسيق زيارات خاصة", "مراجعة ملاءمة نمط الحياة", "لوجستيات الإقامة والزيارة"],
-      experienceStandard: "سرية ومعرفة وانتقائية بعيداً عن ضجيج السوق العام.",
-      difference: "تنظر وصول للعقار من زاوية كيف سيعيش العميل ويستضيف ويسافر ويحمي خصوصيته.",
-      sampleRequests: ["بحث عن فيلا خاصة", "زيارة شقة فاخرة", "مراجعة وجهة منزل ثانٍ", "تعريف بفرصة استثمارية", "تخطيط إقامة انتقالية"],
-      audienceRelevance: "لمن يحتاج وصولاً وتقييماً عقارياً يحترم نمط الحياة والسرية.",
-      cta: "ناقش الوصول العقاري",
-      imageLabel: "وصول إلى مسكن فاخر"
     }
   }
 ];
@@ -689,142 +449,6 @@ const content = {
       outcome: "Emotional Outcome",
       back: "Back to Services"
     }
-  },
-  ar: {
-    meta: "",
-    nav: { explore: "استكشف البروفايل", services: "عرض الخدمات", print: "طباعة", share: "مشاركة", copy: "نسخ", copied: "تم النسخ", shared: "تم نسخ الرابط" },
-    cover: {
-      label: "",
-      title: "إدارة نمط حياة خاص... مصممة حولك.",
-      desc: "وصول كونسيرج تدير التعقيد الخفي خلف أنماط الحياة عالية القيمة عبر الخصوصية والاستباقية والوصول الموثوق والتنفيذ السلس.",
-      sub: "كونسيرج فاخر · سفر · وصول خاص · مناسبات · تنسيق نمط حياة",
-      visual: "تنسيق هادئ لمن يتطلب وقتهم وخصوصيتهم ومعاييرهم شريك تشغيل موثوقاً."
-    },
-    summary: "وصول كونسيرج ليست مجرد مزود خدمات. إنها <strong>شريك خاص لإدارة نمط الحياة</strong> للأفراد والعائلات والتنفيذيين وعملاء الشركات والضيوف ذوي الأهمية والشركاء الفاخرين ممن يحتاجون تنسيقاً موثوقاً في السفر والوصول والضيافة والمناسبات والأصول والحياة اليومية.",
-    sections: {
-      profileIndex: {
-        num: "02",
-        title: "خريطة البروفايل التفاعلي",
-        label: "Digital Alternative To The Company Profile",
-        body: [
-          "هذا البروفايل يحوّل ملف الشركة الورقي إلى وثيقة تنفيذية حية تجمع أساس العلامة، منطق التشغيل، محفظة الخدمات، شرائح العملاء، ومعلومات التواصل الخاص في تجربة واحدة قابلة للمشاركة.",
-          "صُمم ليكون مدخلًا أوليًا للعملاء والشركاء والمراجعين التنفيذيين، مع الحفاظ على هوية وصول الهادئة والسرية."
-        ],
-        facts: [["16", "بروفايل خدمة مخصص"], ["05", "مسارات لشرائح العملاء"], ["03", "أسس للعلامة"], ["01", "نقطة تواصل خاصة"]],
-        cards: [
-          ["أساس العلامة", "الرؤية والرسالة والقيم والوعد العالمي كما وردت في البروفايل المصدر.", "principles"],
-          ["منظومة الشركاء", "صياغة رقمية مصقولة لصفحة الشركاء ومنظومة الوصول الفاخر.", "ecosystem"],
-          ["الوعد العالمي", "نخدمك عالمياً، أينما كنت.", "global"],
-          ["محفظة الخدمات", "عرض تفاعلي كامل لعائلات خدمات وصول كونسيرج الست عشرة.", "services"],
-          ["مسارات العملاء", "تموضع واضح للأفراد والتنفيذيين والعائلات والضيوف المهمين والشركاء الفاخرين.", "segments"],
-          ["معيار التشغيل", "الخصوصية والسرية والاستباقية والوصول الموثوق والتنسيق السلس.", "standard"]
-        ]
-      },
-      essence: {
-        num: "06",
-        title: "جوهر العلامة",
-        label: "Private Lifestyle Management Partner",
-        body: [
-          "توجد وصول للعملاء الذين تتحرك حياتهم بين الخاص والمهني والدولي. دورها ليس إضافة ضجيج جديد، بل إزالة التعقيد من خلفية الحياة عالية القيمة.",
-          "تدير العلامة الوقت والوصول والخصوصية وجودة الخدمة والمتابعة من خلال طبقة تنسيق واحدة وسرية."
-        ],
-        cards: [
-          ["التعقيد", "تحول وصول احتياجات نمط الحياة الواسعة إلى طلبات قابلة للتنفيذ بملكية واضحة."],
-          ["الوقت", "لا يحتاج العميل إلى إدارة كل مورّد وتأكيد ومسار وتغيير بنفسه."],
-          ["الخصوصية", "تُدار الطلبات بسرية وحساسية تجاه السياق العائلي والمهني والاجتماعي."]
-        ]
-      },
-      principles: {
-        num: "03",
-        title: "الرؤية والرسالة والقيم",
-        label: "Profile Foundation From Source PDF",
-        cards: [
-          ["الرؤية", "أن نكون مجموعة كونسيرج فاخرة عالمية رائدة، تقود استثمارات استراتيجية في قطاع السياحة والضيافة الفاخرة."],
-          ["الرسالة", "تمكين علاماتنا وخدماتنا من تقديم تجارب ضيافة استثنائية تخلق قيمة مستدامة لعملائنا وشركائنا وأصحاب المصلحة."],
-          ["القيم", "نؤمن أن الفخامة ليست مجرد مظهر، بل تجربة مصممة بعناية لتجعل نمط حياة العميل أكثر سهولة وخصوصية وراحة."]
-        ]
-      },
-      global: {
-        num: "05",
-        title: "الوصول العالمي",
-        label: "Serving You Globally",
-        body: ["نخدمك عالمياً، أينما كنت.", "تتمحور وصول حول الحركة الدولية والوصول الموثوق والتنسيق الخاص عبر الوجهات والمساكن والمناسبات واحتياجات نمط الحياة."],
-        metrics: [["16", "عائلة خدمات كونسيرج"], ["05", "مسارات لشرائح العملاء"], ["Global", "حسب الطلب وشبكة الشركاء"], ["Private", "تنسيق يبدأ بطلب خاص"]]
-      },
-      ecosystem: {
-        num: "04",
-        title: "منظومة الشركاء والوصول",
-        label: "Curated Network, Not Public Claims",
-        body: ["تعمل وصول عبر منظومة شركاء منتقاة. تُعرض فئات الشركاء دون استخدام شعارات غير موثقة، حفاظاً على الاحترافية ووضوح حقوق الاستخدام."],
-        items: ["فنادق فاخرة", "طيران خاص", "يخوت فاخرة", "منتجعات", "مطاعم راقية", "منتجعات عافية", "عقارات", "أزياء فاخرة", "فن وتصميم", "مناسبات خاصة"]
-      },
-      services: {
-        num: "07",
-        title: "نظرة عامة على الخدمات",
-        label: "Explore Dedicated Service Profiles",
-        search: "ابحث في الخدمات",
-        all: "كل الخدمات",
-        empty: "لا توجد خدمات مطابقة للبحث والتصفية الحالية.",
-        explore: "استكشف الخدمة"
-      },
-      segments: {
-        num: "08",
-        title: "شرائح العملاء",
-        label: "Pathways By Client Need",
-        cards: [
-          ["الأفراد الخاصون", "يحتاجون حماية للوقت وخصوصية ودعماً راقياً لنمط الحياة.", "كونسيرج نمط الحياة، المساعد الشخصي، الوصول الخاص"],
-          ["الشركات والتنفيذيون", "يحتاجون سفراً سلساً واستضافة وتنسيقاً لضيوف عالي القيمة.", "سفر الأعمال، كونسيرج الشركات، التنقل"],
-          ["العائلات والمساكن الخاصة", "تحتاج استمرارية ودعماً موثوقاً وتنسيقاً للوجهات أو الإقامات.", "الإقامة الفاخرة، إدارة السفر، كونسيرج نمط الحياة"],
-          ["الضيوف المهمون", "يحتاجون رعاية وصول ووصولاً مميزاً وحركة سرية.", "الوصول الخاص، التنقل، تخطيط المناسبات"],
-          ["الشركاء الفاخرون", "يحتاجون طبقة كونسيرج موثوقة لتجارب عملائهم المميزة.", "كونسيرج الشركات، المناسبات، تأجير اليخوت"]
-        ]
-      },
-      process: {
-        num: "09",
-        title: "كيف تعمل وصول",
-        label: "Private Inquiry To Continuous Relationship",
-        steps: [
-          ["طلب خاص", "يُستقبل الطلب بسرية ويُحدد نطاقه حسب الوقت والحساسية والنتيجة المقصودة."],
-          ["تقييم نمط الحياة", "تتحول التفضيلات والأولويات واحتياجات الخصوصية وسجل الخدمة إلى ملف عمل واضح."],
-          ["ترشيح الخدمة الأنسب", "تحدد وصول مسار الخدمة وطبقة الشركاء المناسبة للطلب."],
-          ["التنفيذ والتنسيق", "ينسق الفريق المورّدين والتوقيت والتواصل والتأكيدات والتعامل مع البدائل."],
-          ["علاقة مستمرة", "يتطور فهم العميل بمرور الوقت، فيقل التكرار وتزداد الدقة."]
-        ]
-      },
-      standard: {
-        num: "10",
-        title: "معيار وصول",
-        label: "Operating Principles",
-        cards: [
-          ["الخصوصية", "يُدار سياق العميل وحركته الشخصية بكثير من التحفظ."],
-          ["السرية", "تُقدم الفخامة دون استعراض غير ضروري."],
-          ["الاستباقية", "تُدرس التفضيلات والمخاطر قبل أن يضطر العميل إلى متابعة التفاصيل."],
-          ["الوصول الموثوق", "تتحرك الطلبات عبر شركاء مناسبين وقنوات واعية."],
-          ["التنسيق السلس", "تبقى التجربة المرئية هادئة لأن طبقة التشغيل مُدارة."],
-          ["الفهم الشخصي", "تتحسن الخدمة عبر المعرفة المتراكمة، لا عبر نصوص عامة."]
-        ]
-      },
-      inquiry: {
-        label: "Contact & Private Inquiry",
-        title: "ابدأ بطلب خاص.",
-        body: "شاركنا الطلب أو الوجهة أو المناسبة أو احتياج نمط الحياة. ستراجع وصول السياق وتقترح مسار الخدمة الأنسب بسرية.",
-        request: "طلب تواصل خاص",
-        email: "البريد الإلكتروني",
-        phone: "الهاتف",
-        website: "الموقع الإلكتروني"
-      }
-    },
-    serviceLabels: {
-      forWhom: "لمن",
-      when: "متى تكون مهمة",
-      handles: "ما تتولاه وصول",
-      standard: "معيار التجربة",
-      difference: "ما يجعل التجربة مختلفة",
-      samples: "نماذج طلبات",
-      audience: "ملاءمة الشريحة المستهدفة",
-      outcome: "الأثر العاطفي",
-      back: "العودة إلى الخدمات"
-    }
   }
 };
 
@@ -879,32 +503,18 @@ const ecosystemImageFiles = [
   "private-events"
 ];
 
-const ecosystemRoles = {
-  en: [
-    "Hospitality access",
-    "Private mobility",
-    "Marine lifestyle",
-    "Resort stays",
-    "Dining curation",
-    "Wellness retreats",
-    "Property access",
-    "Personal style",
-    "Culture and interiors",
-    "Private hosting"
-  ],
-  ar: [
-    "وصول ضيافي",
-    "تنقل خاص",
-    "نمط حياة بحري",
-    "إقامات منتجعية",
-    "تنسيق المطاعم",
-    "رحلات استشفاء",
-    "وصول عقاري",
-    "أسلوب شخصي",
-    "ثقافة ومساحات",
-    "استضافة خاصة"
-  ]
-};
+const ecosystemRoles = [
+  "Hospitality access",
+  "Private mobility",
+  "Marine lifestyle",
+  "Resort stays",
+  "Dining curation",
+  "Wellness retreats",
+  "Property access",
+  "Personal style",
+  "Culture and interiors",
+  "Private hosting"
+];
 
 const accessLogos = [
   "Four Seasons",
@@ -939,24 +549,24 @@ const socialLinks = [
 ];
 
 let state = {
-  lang: localStorage.getItem("wosol-lang") || "ar",
+  lang: "en",
   filter: "all",
   query: ""
 };
 
-function getServices(lang = state.lang) {
+function getServices() {
   return serviceBlueprints.map((service) => ({
     id: service.id,
     categoryKey: service.categoryKey,
-    category: categories[service.categoryKey][lang],
+    category: categories[service.categoryKey],
     image: service.image,
     imagePrompt: service.imagePrompt,
-    ...service[lang]
+    ...service.en
   }));
 }
 
 function textDirClass() {
-  return state.lang === "ar" ? "ar" : "en";
+  return "en";
 }
 
 function escapeHtml(value) {
@@ -969,7 +579,7 @@ function escapeHtml(value) {
 }
 
 function sectionShell(key, inner) {
-  const section = content[state.lang].sections[key];
+  const section = content.en.sections[key];
   return `
     <div class="section-header">
       <span class="section-num en">${section.num}</span>
@@ -993,8 +603,8 @@ function card(title, desc, index, featured = false, meta = "") {
 }
 
 function renderCover() {
-  const c = content[state.lang].cover;
-  document.getElementById("documentMeta").textContent = content[state.lang].meta;
+  const c = content.en.cover;
+  document.getElementById("documentMeta").textContent = content.en.meta;
   document.getElementById("cover").innerHTML = `
     <div class="hero-layout">
       <div>
@@ -1002,8 +612,8 @@ function renderCover() {
         <p class="hero-desc ${textDirClass()}">${c.desc}</p>
         <div class="hero-en en">${c.sub}</div>
         <div class="hero-actions">
-          <button class="action-btn primary" type="button" data-jump="essence">${content[state.lang].nav.explore}</button>
-          <button class="action-btn subtle" type="button" data-jump="services">${content[state.lang].nav.services}</button>
+          <button class="action-btn primary" type="button" data-jump="essence">${content.en.nav.explore}</button>
+          <button class="action-btn subtle" type="button" data-jump="services">${content.en.nav.services}</button>
         </div>
       </div>
       <div class="visual-frame cover-card" role="img" aria-label="${escapeHtml(c.visual)}">
@@ -1019,12 +629,12 @@ function renderCover() {
 function renderSummary() {
   document.getElementById("executiveSummary").innerHTML = `
     <span class="exec-label en">Executive Summary</span>
-    <p class="${textDirClass()}">${content[state.lang].summary}</p>
+    <p class="${textDirClass()}">${content.en.summary}</p>
   `;
 }
 
 function renderProfileIndex() {
-  const s = content[state.lang].sections.profileIndex;
+  const s = content.en.sections.profileIndex;
   document.getElementById("profileIndex").innerHTML = sectionShell("profileIndex", `
     <div class="profile-index-layout">
       <div>
@@ -1046,7 +656,7 @@ function renderProfileIndex() {
           <div class="card-title ${textDirClass()}">${escapeHtml(item[0])}</div>
           <div class="card-desc ${textDirClass()}">${escapeHtml(item[1])}</div>
           <button class="card-cta" type="button" data-jump="${escapeHtml(item[2])}">
-            ${content[state.lang].nav.explore}<span class="card-cta-arrow"></span>
+            ${content.en.nav.explore}<span class="card-cta-arrow"></span>
           </button>
         </article>
       `).join("")}
@@ -1055,7 +665,7 @@ function renderProfileIndex() {
 }
 
 function renderBasicSections() {
-  const s = content[state.lang].sections;
+  const s = content.en.sections;
 
   renderProfileIndex();
 
@@ -1110,7 +720,7 @@ function renderBasicSections() {
 }
 
 function renderPartnerShowcase(items) {
-  const roles = ecosystemRoles[state.lang];
+  const roles = ecosystemRoles;
 
   return `
     <div class="partner-showcase" data-partner-showcase>
@@ -1124,7 +734,7 @@ function renderPartnerShowcase(items) {
 
 function renderPartnerGallery(items, roles, variant) {
   const isMobile = variant === "mobile";
-  const readLabel = state.lang === "ar" ? "استكشف الفئة" : "Explore category";
+  const readLabel = "Explore category";
   const slides = items.map((item, index) => `
     <article class="partner-gallery-card" data-partner-slide="${index}">
       <img src="${responsivePartnerImagePath(ecosystemImageFiles[index], "desktop")}" srcset="${responsivePartnerImagePath(ecosystemImageFiles[index], "mobile")} 900w, ${responsivePartnerImagePath(ecosystemImageFiles[index], "desktop")} 1280w" sizes="(max-width: 640px) 82vw, 33vw" alt="${escapeHtml(item)}" loading="lazy" />
@@ -1144,8 +754,8 @@ function renderPartnerGallery(items, roles, variant) {
     <div class="partner-gallery partner-gallery--${variant}" data-partner-gallery>
       <div class="partner-gallery-head">
         <div>
-          <span class="closing-label en">${isMobile ? (state.lang === "ar" ? "Mobile Access View" : "Curated Access View") : (state.lang === "ar" ? "Curated Access Gallery" : "Curated Access Gallery")}</span>
-          <p class="${textDirClass()}">${state.lang === "ar" ? "استعرض فئات الوصول بصور واضحة وتفاصيل مختصرة." : "Browse partner categories through larger, clearer visual cards."}</p>
+          <span class="closing-label en">Curated Access Gallery</span>
+          <p class="${textDirClass()}">Browse partner categories through larger, clearer visual cards.</p>
         </div>
         <div class="partner-gallery-controls">
           <button class="partner-gallery-btn" type="button" data-gallery-prev aria-label="Previous partner category">‹</button>
@@ -1206,11 +816,18 @@ function accessLogoMarkup(name) {
       </span>
     `;
   }
+  if (name === "The Leading Hotels of the World") {
+    return `
+      <span class="logo-wordmark logo-wordmark--image logo-wordmark--leading-hotels en">
+        <img src="assets/logos/leading-hotels.svg" alt="The Leading Hotels of the World" loading="lazy" />
+      </span>
+    `;
+  }
   return `<span class="logo-wordmark en">${escapeHtml(name)}</span>`;
 }
 
 function renderServices() {
-  const s = content[state.lang].sections.services;
+  const s = content.en.sections.services;
   const services = getServices();
   const filtered = services.filter((service) => {
     const matchesFilter = state.filter === "all" || service.categoryKey === state.filter;
@@ -1227,7 +844,7 @@ function renderServices() {
 
   const categoryButtons = [
     `<button class="filter-btn ${state.filter === "all" ? "active" : ""}" type="button" data-filter="all">${s.all}</button>`,
-    ...Object.keys(categories).map((key) => `<button class="filter-btn ${state.filter === key ? "active" : ""}" type="button" data-filter="${key}">${categories[key][state.lang]}</button>`)
+    ...Object.keys(categories).map((key) => `<button class="filter-btn ${state.filter === key ? "active" : ""}" type="button" data-filter="${key}">${categories[key]}</button>`)
   ].join("");
 
   document.getElementById("services").innerHTML = sectionShell("services", `
@@ -1242,7 +859,7 @@ function renderServices() {
 }
 
 function serviceCard(service, index) {
-  const s = content[state.lang].sections.services;
+  const s = content.en.sections.services;
   return `
     <article class="strategy-card service-card" data-service="${service.id}">
       <div class="service-card-visual image-loaded" style="${backgroundImageVars("service-image", service.image)}"><span>${escapeHtml(service.imageLabel)}</span></div>
@@ -1291,7 +908,7 @@ function renderInquiry() {
 }
 
 function profileSlides() {
-  const c = content[state.lang];
+  const c = content.en;
   const services = getServices();
   return [
     {
@@ -1356,15 +973,8 @@ function renderProfileDeck() {
           <span class="logo-name">WOSOL</span>
           <span class="logo-sub">CONCIERGE</span>
         </button>
-        <div class="deck-actions">
-          <button class="mini-btn ${state.lang === "ar" ? "active" : ""}" type="button" data-lang="ar">العربية</button>
-          <button class="mini-btn ${state.lang === "en" ? "active" : ""}" type="button" data-lang="en">English</button>
-        </div>
+        <div class="deck-actions"></div>
       </header>
-
-      <nav class="deck-rail" aria-label="Profile pages">
-        ${slides.map((slide) => `<button class="deck-dot ${slide.num === "01" ? "active" : ""}" type="button" data-slide-target="${slide.id}"><span class="en">${slide.num}</span></button>`).join("")}
-      </nav>
 
       <div class="deck-pages">
         ${slides.map((slide, index) => renderProfileSlide(slide, index, slides.length)).join("")}
@@ -1374,12 +984,6 @@ function renderProfileDeck() {
 }
 
 function renderProfileSlide(slide, index, total) {
-  const footer = `
-    <div class="slide-footer">
-      <span class="en">${slide.num} / ${String(total).padStart(2, "0")}</span>
-      <span class="en">WOSOL Concierge</span>
-    </div>
-  `;
 
   if (slide.kind === "cover") {
     return `
@@ -1394,7 +998,6 @@ function renderProfileSlide(slide, index, total) {
           <h1 class="${textDirClass()}">${escapeHtml(slide.title)}</h1>
           <p class="${textDirClass()}">${escapeHtml(slide.body)}</p>
         </div>
-        ${footer}
       </section>
     `;
   }
@@ -1412,7 +1015,6 @@ function renderProfileSlide(slide, index, total) {
             </article>
           `).join("")}
         </div>
-        ${footer}
       </section>
     `;
   }
@@ -1424,7 +1026,6 @@ function renderProfileSlide(slide, index, total) {
         <div class="partner-logo-grid">
           ${accessLogos.map((name) => `<div class="partner-logo-cell">${accessLogoMarkup(name)}</div>`).join("")}
         </div>
-        ${footer}
       </section>
     `;
   }
@@ -1437,7 +1038,6 @@ function renderProfileSlide(slide, index, total) {
           <h2 class="${textDirClass()}">${escapeHtml(slide.title)}</h2>
         </div>
         <div class="global-photo" style="${backgroundImageVars("slide-image", slide.image)}"></div>
-        ${footer}
       </section>
     `;
   }
@@ -1453,7 +1053,6 @@ function renderProfileSlide(slide, index, total) {
         <figure class="service-slide-image" style="${backgroundImageVars("slide-image", slide.image)}" aria-label="${escapeHtml(slide.imageLabel)}">
           <figcaption class="en">${escapeHtml(slide.imageLabel)}</figcaption>
         </figure>
-        ${footer}
       </section>
     `;
   }
@@ -1471,7 +1070,6 @@ function renderProfileSlide(slide, index, total) {
           <a class="en" href="https://wosolconcierge.com" target="_blank" rel="noopener noreferrer">wosolconcierge.com</a>
         </div>
       </div>
-      ${footer}
     </section>
   `;
 }
@@ -1499,7 +1097,7 @@ function contactItem(label, value) {
     <div class="contact-item">
       <span class="en">${escapeHtml(label)}</span>
       <strong class="en">${escapeHtml(value)}</strong>
-      <button class="mini-btn" type="button" data-copy="${escapeHtml(value)}">${content[state.lang].nav.copy}</button>
+      <button class="mini-btn" type="button" data-copy="${escapeHtml(value)}">${content.en.nav.copy}</button>
     </div>
   `;
 }
@@ -1507,7 +1105,7 @@ function contactItem(label, value) {
 function renderServiceDetail(id) {
   const service = getServices().find((item) => item.id === id);
   if (!service) return;
-  const labels = content[state.lang].serviceLabels;
+  const labels = content.en.serviceLabels;
   document.getElementById("serviceDetailContent").innerHTML = `
     <div class="service-hero">
       <div>
@@ -1570,15 +1168,6 @@ function closeServiceDetail(updateHash = true) {
   }
 }
 
-function setLanguage(lang) {
-  state.lang = lang;
-  localStorage.setItem("wosol-lang", lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.body.dir = lang === "ar" ? "rtl" : "ltr";
-  document.querySelectorAll("[data-lang]").forEach((btn) => btn.classList.toggle("active", btn.dataset.lang === lang));
-  renderAll();
-}
 
 function renderAll() {
   document.getElementById("profileRoot").innerHTML = renderProfileDeck();
@@ -1588,9 +1177,6 @@ function renderAll() {
 }
 
 function bindDynamicEvents() {
-  document.querySelectorAll("[data-lang]").forEach((btn) => {
-    btn.onclick = () => setLanguage(btn.dataset.lang);
-  });
   document.querySelectorAll("[data-slide-target]").forEach((btn) => {
     btn.onclick = () => goToSlide(btn.dataset.slideTarget);
   });
@@ -1703,9 +1289,6 @@ function updateProgress() {
       activeNumber = section.dataset.slide || activeNumber;
     }
   });
-  document.querySelectorAll(".deck-dot").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.slideTarget === active);
-  });
   const activeSlideNumber = document.getElementById("activeSlideNumber");
   if (activeSlideNumber) activeSlideNumber.textContent = activeNumber;
 }
@@ -1750,7 +1333,7 @@ async function copyText(value) {
 async function shareProfile(button) {
   const shareData = {
     title: "WOSOL Concierge Interactive Profile",
-    text: content[state.lang].cover.desc,
+    text: content.en.cover.desc,
     url: window.location.href.split("#")[0]
   };
   if (navigator.share) {
@@ -1758,8 +1341,8 @@ async function shareProfile(button) {
     return;
   }
   await copyText(shareData.url);
-  const original = content[state.lang].nav.share;
-  button.textContent = content[state.lang].nav.shared;
+  const original = content.en.nav.share;
+  button.textContent = content.en.nav.shared;
   window.setTimeout(() => { button.textContent = original; }, 1400);
 }
 
@@ -1770,9 +1353,6 @@ function handleHash() {
   }
 }
 
-document.querySelectorAll("[data-lang]").forEach((btn) => {
-  btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-});
 
 window.addEventListener("scroll", updateProgress, { passive: true });
 window.addEventListener("hashchange", handleHash);
@@ -1783,6 +1363,9 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp" && !document.body.classList.contains("detail-open")) window.scrollBy({ top: -window.innerHeight * 0.82, behavior: "smooth" });
 });
 
-setLanguage(state.lang);
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
+document.body.dir = "ltr";
+renderAll();
 updateProgress();
 initIntroLoader();
